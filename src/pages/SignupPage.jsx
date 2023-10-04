@@ -4,6 +4,8 @@ import "../styles/Signup.scss";
 import { ReactComponent as KakaoIcon } from "../assets/icons/kakao-logo.svg";
 import { ReactComponent as NaverIcon } from "../assets/icons/naver-logo.svg";
 
+import BottomText from "../components/signup/BottomText";
+
 /* TODO: 로그인/회원가입 페이지
  * [ ] 소셜로그인 페이지 퍼블리싱
  * [ ] 소셜로그인 기능 구현 (인증코드와 Redirect URI 전송해 사이트 토큰 발급받기)
@@ -30,6 +32,7 @@ const SignupPage = () => {
           </button>
         </div>
       </div>
+      <BottomText />
     </div>
   );
 };
