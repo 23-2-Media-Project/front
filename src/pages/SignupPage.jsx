@@ -4,7 +4,7 @@ import "../styles/Signup.scss";
 import { ReactComponent as KakaoIcon } from "../assets/icons/kakao-logo.svg";
 import { ReactComponent as NaverIcon } from "../assets/icons/naver-logo.svg";
 
-import BottomText from "../components/signup/BottomText";
+import BottomLicenseText from "../components/signup/BottomLicenseText";
 
 /* TODO: 로그인/회원가입 페이지
  * [ ] 소셜로그인 페이지 퍼블리싱
@@ -32,7 +32,7 @@ const SignupPage = () => {
           </button>
         </div>
       </div>
-      <BottomText />
+      <BottomLicenseText />
     </div>
   );
 };
