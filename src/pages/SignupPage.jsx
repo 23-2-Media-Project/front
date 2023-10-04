@@ -1,10 +1,8 @@
 import React from "react";
 import "../styles/SignupPage.scss";
 
-import { ReactComponent as KakaoIcon } from "../assets/icons/kakao-logo.svg";
-import { ReactComponent as NaverIcon } from "../assets/icons/naver-logo.svg";
-
 import BottomLicenseText from "../components/signup/BottomLicenseText";
+import StartingSection from "../components/signup/StartingSection";
 
 /* TODO: 로그인/회원가입 페이지
  * [O] 소셜로그인 페이지 퍼블리싱
@@ -14,24 +12,10 @@ import BottomLicenseText from "../components/signup/BottomLicenseText";
  */
 
 const SignupPage = () => {
+  //FIXME: 카카오 네이버 버튼 눌림 여부 state (추후 첫 유저인지 기존 유저인지 구분에 따라 관심사 설정 페이지가 보일지 말지 결정)
   return (
     <div className="signup-container">
-      <div className="content-wrap">
-        <span className="title">로그인/회원가입</span>
-        <span className="sub-title">
-          소셜로그인을 통해 로그인/회원가입 진행
-        </span>
-        <div className="signup-btn-wrap">
-          <button className="signup-btn">
-            <KakaoIcon width={24} height={24} />
-            <span className="btn-text">카카오로 시작하기</span>
-          </button>
-          <button className="signup-btn">
-            <NaverIcon width={24} height={24} />
-            <span className="btn-text">네이버로 시작하기</span>
-          </button>
-        </div>
-      </div>
+      <StartingSection />
       <BottomLicenseText />
     </div>
   );
