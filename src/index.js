@@ -5,6 +5,8 @@ import { BrowserRouter } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 
+import "./styles/index.css";
+
 import App from "./App";
 import Header from "./components/common/Header";
 
