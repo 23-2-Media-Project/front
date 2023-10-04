@@ -49,7 +49,7 @@ const HeaderWrap = styled.div`
   align-items: center;
   justify-content: center;
   width: 100vw;
-  height: 8vh;
+  height: 80px;
   background-color: red;
   padding: 0 2%;
   box-sizing: border-box;
