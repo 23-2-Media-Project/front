@@ -1,9 +1,12 @@
 .signup-container {
   display: flex;
+  flex-direction: column;
   width: 100vw;
-  height: 92vh; // header 8vh 뺀 값
+  height: calc(100vh - 80px);
   background-color: #fff;
   color: #333;
+  padding: 50px 55px;
+  box-sizing: border-box;
 
   .content-wrap {
     margin: auto auto;
@@ -30,6 +33,7 @@
 
       .signup-btn {
         cursor: pointer;
+        position: relative;
         display: flex;
         align-items: center;
         height: 50px;
@@ -50,8 +54,9 @@
         }
         .btn-text {
           position: absolute;
+          width: max-content;
           left: 50%;
-          transform: translateX(-50%);
+          transform: translate(-50%);
           font-size: 16px;
           font-weight: 500;
         }
