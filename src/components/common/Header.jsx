@@ -19,7 +19,6 @@ const Header = () => {
       <PageBtnWrap>
         <PageBtn to="/">홈</PageBtn>
         <PageBtn>전시</PageBtn>
-        <PageBtn>파트너</PageBtn>
         <PageBtn>마이페이지</PageBtn>
       </PageBtnWrap>
       <SignupBtn to="signup">로그인/회원가입</SignupBtn>
