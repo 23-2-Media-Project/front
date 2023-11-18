@@ -3,8 +3,11 @@ import React, { useCallback, useState } from "react";
 import { ReactComponent as ArrowIcon } from "../assets/icons/arrow.svg";
 import { ReactComponent as Logo } from "../assets/logo/logo.svg";
 import "../styles/StartingPage.scss";
+import { useNavigate } from "react-router-dom";
 
 const StartingPage = () => {
+  const navigate = useNavigate();
+
   // 마우스 x,y 좌표를 담는 state
   const [mouseX, setMouseX] = useState(0);
   const [mouseY, setMouseY] = useState(0);
@@ -37,7 +40,7 @@ const StartingPage = () => {
         </div>
         <div className="license-text">©Artwalk. All Rights Reserved.</div>
       </div>
-      <ArrowIcon className="arrow-icon" />
+      <ArrowIcon className="arrow-icon" onClick={() => navigate("main")} />
     </div>
   );
 };
