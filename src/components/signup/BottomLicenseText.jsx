@@ -7,7 +7,7 @@ const BottomLicenseText = () => {
 };
 
 const Text = styled.div`
-  margin: 20px auto 0;
-  font-size: 16px;
+  margin: auto auto 0px;
+  font-size: 14px;
 `;
 export default BottomLicenseText;
