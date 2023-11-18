@@ -1,20 +1,79 @@
 @import "./animation.scss";
 
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap");
 .main-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  max-height: max-content;
   background-color: #000;
   padding: 140px 10vw 50px;
   box-sizing: border-box;
 
   .left-wrap {
-    height: 100%;
-    .logo {
-      height: 50%;
-      @include infiniteAnimation(0.3s, 1.5s, moveUpDown);
+    height: 32vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo-wrap {
+      .logo {
+        @include infiniteAnimation(0.3s, 1.5s, moveUpDown);
+      }
+    }
+    .monthly-exhibition-btn-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5vw;
+
+      .btn-title {
+        color: #fff;
+        font-size: 1.2vw;
+      }
+      .monthly-exhibition-btn {
+        cursor: pointer;
+        position: relative;
+        height: 4vw;
+        width: 15vw;
+        box-sizing: border-box;
+        font-size: 1.5vw;
+        color: #fff;
+        background-color: rgba(255, 255, 255, 0.35);
+        border: 1px solid #fff;
+        border-radius: 50px;
+
+        &:hover {
+          opacity: 0.5;
+          transition: 0.5s;
+        }
+        .btn-text {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-family: "Rubik Glitch" !important;
+
+          &.white {
+            z-index: 1;
+          }
+          &.green {
+            top: 50%;
+            left: 50%;
+            transform: translate(-52%, -60%);
+            color: #72f56f;
+          }
+          &.red {
+            top: 50%;
+            left: 50%;
+            transform: translate(-48%, -40%);
+            color: #ed4848;
+          }
+        }
+      }
     }
   }
 }

@@ -12,7 +12,17 @@ const MainPage = () => {
   return (
     <div className="main-container">
       <div className="left-wrap">
-        <Logo3d style={{ width: "25vw" }} className="logo" />
+        <div className="logo-wrap">
+          <Logo3d style={{ width: "25vw" }} className="logo" />
+        </div>
+        <div className="monthly-exhibition-btn-wrap">
+          <div className="btn-title">12월의 전시회 입장하기</div>
+          <button className="monthly-exhibition-btn">
+            <div className="btn-text white">CHRISTMAS</div>
+            <div className="btn-text green">CHRISTMAS</div>
+            <div className="btn-text red">CHRISTMAS</div>
+          </button>
+        </div>
       </div>
       <div className="right-wrap"></div>
     </div>
