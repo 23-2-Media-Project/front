@@ -1,0 +1,10 @@
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: calc(100vh - 90px);
+  background-color: #fff;
+  color: #333;
+  padding: 50px 55px;
+  box-sizing: border-box;
+}
