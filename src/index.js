@@ -8,7 +8,6 @@ import reset from "styled-reset";
 import "./styles/index.css";
 
 import App from "./App";
-import Header from "./components/common/Header";
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -19,7 +18,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <GlobalStyle />
-    {window.location.pathname !== "/" && <Header />}
     <App />
   </BrowserRouter>
 );
