@@ -32,7 +32,7 @@ const StartingPage = () => {
       </div>
       <div className="content-wrap">
         <div className="title-wrap">
-          <Logo style={{ width: "80px" }} />
+          <Logo style={{ width: "90px" }} />
           <span className="title">ArtWalk</span>
         </div>
         <div className="license-text">©Artwalk. All Rights Reserved.</div>

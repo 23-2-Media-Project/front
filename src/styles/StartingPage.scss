@@ -1,3 +1,5 @@
+@import "./animation.scss";
+
 .starting-container {
   display: flex;
   justify-content: space-between;
@@ -50,18 +52,19 @@
     justify-content: space-between;
     width: max-content;
     height: 100%;
+    @include animation(0s, 1.5s, moveRight);
 
     .title-wrap {
       display: flex;
       align-items: center;
       gap: 30px;
       color: #a88bf7;
-      font-size: 20px;
+      font-size: 24px;
       font-weight: 600;
     }
     .license-text {
       color: #a88bf7;
-      font-size: 14px;
+      font-size: 16px;
     }
   }
   .arrow-icon {
@@ -69,6 +72,7 @@
     position: relative;
     z-index: 2;
     width: 10vw;
+    @include animation(0s, 1.5s, moveLeft);
 
     :hover {
       transition: 0.5s;
