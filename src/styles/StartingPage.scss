@@ -1,0 +1,82 @@
+@import "./animation.scss";
+
+.starting-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  color: #333;
+  padding: 50px 55px;
+  box-sizing: border-box;
+
+  .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35vw;
+    height: 35vw;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .hidden-text-wrap {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    color: #000;
+
+    .main-text {
+      font-weight: 600;
+      font-size: 6vw;
+    }
+    .sub-text {
+      font-size: 2vw;
+      font-weight: 500;
+      margin-top: 20px;
+    }
+  }
+  .content-wrap {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: max-content;
+    height: 100%;
+    @include animation(0s, 1.5s, moveRight);
+
+    .title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      color: #a88bf7;
+      font-size: 24px;
+      font-weight: 600;
+    }
+    .license-text {
+      color: #a88bf7;
+      font-size: 16px;
+    }
+  }
+  .arrow-icon {
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    width: 10vw;
+    @include animation(0s, 1.5s, moveLeft);
+
+    :hover {
+      transition: 0.5s;
+      opacity: 0.5;
+    }
+  }
+}

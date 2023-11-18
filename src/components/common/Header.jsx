@@ -4,14 +4,12 @@ import styled from "styled-components";
 
 import { ReactComponent as Logo } from "../../assets/logo/logo.svg";
 
-/* FIXME: 헤더 컴포넌트 (임시로 디자인 완료 후 수정 필요)
- * TODO:
+/* TODO:
  * [O] 로고 삽입
- * [ ] 홈 화면 이동 버튼 생성
- * [ ] 전시 페이지 이동 버튼 생성
- * [ ] 마이페이지 이동 버튼 생성
- * [ ] 로그인/로그라웃 버튼 생성
- *
+ * [O] 홈 화면 이동 버튼 생성
+ * [O] 전시 페이지 이동 버튼 생성
+ * [O] 마이페이지 이동 버튼 생성
+ * [O] 로그인/로그아웃 버튼 생성
  */
 
 const Header = () => {
@@ -24,12 +22,12 @@ const Header = () => {
         <Logo style={{ width: "50px" }} />
       </Link>
       <PageBtnWrap>
-        {location?.pathname === "/" ? (
-          <PageBtn to="/" style={{ marginLeft: "5vw" }}>
+        {location?.pathname === "/main" ? (
+          <PageBtn to="main" style={{ marginLeft: "5vw" }}>
             Home
           </PageBtn>
         ) : (
-          <PageBlurBtn to="/" style={{ marginLeft: "5vw" }}>
+          <PageBlurBtn to="/main" style={{ marginLeft: "5vw" }}>
             Home
           </PageBlurBtn>
         )}
@@ -79,12 +77,12 @@ const PageBtnWrap = styled.div`
   font-size: 14px;
 `;
 const HeaderWrap = styled.div`
-  position: relative;
+  position: absolute;
   display: flex;
   align-items: center;
-  width: max;
+  width: calc(100vw - 60px);
   height: 60px;
-  margin: 30px 30px 0 30px;
+  margin: 30px;
   background-color: #000;
   border-radius: 100px;
   padding-left: 20px;

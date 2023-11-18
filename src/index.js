@@ -1,14 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, useLocation } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 
 import "./styles/index.css";
 
 import App from "./App";
-import Header from "./components/common/Header";
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -19,7 +18,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <GlobalStyle />
-    <Header />
     <App />
   </BrowserRouter>
 );
