@@ -1,4 +1,7 @@
 import React, { useCallback, useState } from "react";
+
+import { ReactComponent as ArrowIcon } from "../assets/icons/arrow.svg";
+import { ReactComponent as Logo } from "../assets/logo/logo.svg";
 import "../styles/StartingPage.scss";
 
 const StartingPage = () => {
@@ -21,6 +24,20 @@ const StartingPage = () => {
           left: mouseX,
         }}
       ></div>
+      <div className="hidden-text-wrap">
+        <div className="main-text">WEB</div>
+        <div className="main-text">PORTFOLIO &</div>
+        <div className="main-text">EXHIBITION</div>
+        <div className="sub-text">ARTWALK</div>
+      </div>
+      <div className="content-wrap">
+        <div className="title-wrap">
+          <Logo style={{ width: "80px" }} />
+          <span className="title">ArtWalk</span>
+        </div>
+        <div className="license-text">©Artwalk. All Rights Reserved.</div>
+      </div>
+      <ArrowIcon className="arrow-icon" />
     </div>
   );
 };
