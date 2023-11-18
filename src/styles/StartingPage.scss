@@ -1,10 +1,21 @@
-.signup-container {
+.starting-container {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: calc(100vh - 90px);
-  background-color: #fff;
+  height: 100vh;
+  background-color: #000;
   color: #333;
   padding: 50px 55px;
   box-sizing: border-box;
+
+  .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35vw;
+    height: 35vw;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
