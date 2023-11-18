@@ -10,7 +10,6 @@ import { ReactComponent as Logo } from "../../assets/logo/logo.svg";
  * [O] 전시 페이지 이동 버튼 생성
  * [O] 마이페이지 이동 버튼 생성
  * [O] 로그인/로그아웃 버튼 생성
- *
  */
 
 const Header = () => {
@@ -19,7 +18,7 @@ const Header = () => {
 
   return (
     <HeaderWrap>
-      <Link to="main">
+      <Link to="/">
         <Logo style={{ width: "50px" }} />
       </Link>
       <PageBtnWrap>
