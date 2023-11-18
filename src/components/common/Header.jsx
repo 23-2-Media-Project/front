@@ -19,16 +19,16 @@ const Header = () => {
 
   return (
     <HeaderWrap>
-      <Link to="/">
+      <Link to="main">
         <Logo style={{ width: "50px" }} />
       </Link>
       <PageBtnWrap>
-        {location?.pathname === "/" ? (
-          <PageBtn to="/" style={{ marginLeft: "5vw" }}>
+        {location?.pathname === "/main" ? (
+          <PageBtn to="main" style={{ marginLeft: "5vw" }}>
             Home
           </PageBtn>
         ) : (
-          <PageBlurBtn to="/" style={{ marginLeft: "5vw" }}>
+          <PageBlurBtn to="/main" style={{ marginLeft: "5vw" }}>
             Home
           </PageBlurBtn>
         )}
