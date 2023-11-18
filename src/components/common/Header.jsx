@@ -56,6 +56,7 @@ const SignupBtn = styled(Link)`
   text-decoration: none;
   cursor: pointer;
   color: #a88bf7;
+  font-size: 14px;
 `;
 const PageBtn = styled(Link)`
   text-decoration: none;
@@ -75,6 +76,7 @@ const PageBlurBtn = styled(Link)`
 const PageBtnWrap = styled.div`
   display: flex;
   gap: 5vw;
+  font-size: 14px;
 `;
 const HeaderWrap = styled.div`
   position: relative;
