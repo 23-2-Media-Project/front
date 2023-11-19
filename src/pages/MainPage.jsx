@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { ReactComponent as Logo3d } from "../assets/logo/logo-3d.svg";
 
 import "../styles/MainPage.scss";
+import ExhibitionList from "../components/main/ExhibitionList";
 
 /* TODO:
  * [O] 3D 로고 애니메이션 적용
@@ -17,7 +18,7 @@ const MainPage = () => {
     <div className="main-container">
       <div className="left-wrap">
         <div className="logo-wrap">
-          <Logo3d style={{ width: "25vw" }} className="logo" />
+          <Logo3d style={{ width: "350px" }} className="logo" />
         </div>
         <div className="monthly-exhibition-btn-wrap">
           <div className="btn-title">12월의 전시회 입장하기</div>
@@ -33,7 +34,11 @@ const MainPage = () => {
           </button>
         </div>
       </div>
-      <div className="right-wrap"></div>
+      <div className="right-wrap">
+        <ExhibitionList title={"추천 전시회"} />
+        <ExhibitionList title={"인기 전시회"} />
+        <ExhibitionList title={"최신 전시회"} />
+      </div>
     </div>
   );
 };
