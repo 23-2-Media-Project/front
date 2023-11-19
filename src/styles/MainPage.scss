@@ -46,7 +46,7 @@
         font-size: 22px;
         color: #fff;
         background-color: rgba(255, 255, 255, 0.35);
-        border-left: 1px solid #fff;
+        border: 1px solid #fff;
         border-radius: 50px;
 
         &:hover {
@@ -129,7 +129,7 @@
             font-size: 14px;
             padding: 6px 12px;
             border-radius: 30px;
-            border: 1px solid #fff;
+            border: 1px solid #fff !important;
             background-color: rgba($color: #fff, $alpha: 0.5);
           }
         }

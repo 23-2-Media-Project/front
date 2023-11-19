@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { ReactComponent as Logo3d } from "../assets/logo/logo-3d.svg";
 
 import "../styles/MainPage.scss";
+
 import ExhibitionList from "../components/main/ExhibitionList";
 
 /* TODO:
