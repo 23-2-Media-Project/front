@@ -108,7 +108,7 @@
       padding: 20px 25px;
       background-color: rgba(255, 255, 255, 0.4);
       border-radius: 5px;
-
+      @include animation(0, 2.5s, fadeIn);
       .title-wrap {
         display: flex;
         justify-content: space-between;
