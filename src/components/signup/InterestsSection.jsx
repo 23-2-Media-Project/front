@@ -1,7 +1,76 @@
 import React from "react";
+import "../../styles/SignupPage.scss";
+import { useNavigate } from "react-router-dom";
+
+const interestsList = [
+  "예술",
+  "문화",
+  "다양성",
+  "교육",
+  "음식 및 음료",
+  "여행",
+  "자연",
+  "스토리",
+  "미디어",
+  "플랫폼",
+  "미래지향",
+  "인터랙티브",
+  "기념적인",
+  "감성적인",
+  "자연친화적인",
+  "공익적인",
+  "지속가능성",
+  "기술",
+  "우주",
+  "사랑",
+  "게임",
+  "캐릭터",
+  "사진",
+  "취미",
+  "예술",
+  "문화",
+  "다양성",
+  "교육",
+  "음식 및 음료",
+  "여행",
+  "자연",
+  "스토리",
+  "미디어",
+  "플랫폼",
+  "미래지향",
+  "인터랙티브",
+  "기념적인",
+  "감성적인",
+  "자연친화적인",
+  "공익적인",
+  "지속가능성",
+  "기술",
+  "우주",
+  "사랑",
+  "게임",
+  "캐릭터",
+  "사진",
+  "취미",
+];
 
 const InterestsSection = () => {
-  return <div>InterestsPage</div>;
+  const navigate = useNavigate();
+  const GoToMainPage = () => {
+    navigate("/main");
+  };
+  return (
+    <section className="interests-wrap">
+      <span className="title">관심 있는 주제를 선택하시오.</span>
+      <div className="interest-wrap">
+        {interestsList.map((interest) => {
+          return <div className="interest-element">{interest}</div>;
+        })}
+      </div>
+      <button className="interest-submit-btn" onClick={GoToMainPage}>
+        확인
+      </button>
+    </section>
+  );
 };
 
 export default InterestsSection;
