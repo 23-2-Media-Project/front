@@ -10,7 +10,8 @@ import ExhibitionList from "../components/main/ExhibitionList";
 /* TODO:
  * [O] 3D 로고 애니메이션 적용
  * [O] 이달의 전시회 버튼 컴포넌트 구현
- * [] 추천/인기/최신 전시회 목록 컴포넌트 구현
+ * [O] 추천/인기/최신 전시회 섹션 컴포넌트 구현
+ * [] 추천/인기/최신 전시회 목록 클릭시 상세 페이지 이동 구현
  */
 const MainPage = () => {
   const navigate = useNavigate();
