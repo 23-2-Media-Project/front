@@ -3,11 +3,22 @@
   animation-duration: $duration;
   animation-name: $name;
 }
+
+@mixin infiniteAnimation($delay, $duration, $name) {
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-name: $name;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
 @mixin keyframe($animationName) {
   @keyframes #{$animationName} {
     @content;
   }
 }
+
 @include keyframe(moveLeft) {
   0% {
     opacity: 0;
@@ -18,6 +29,7 @@
     right: 0;
   }
 }
+
 @include keyframe(moveRight) {
   0% {
     opacity: 0;
@@ -26,5 +38,23 @@
   100% {
     opacity: 1;
     left: 0;
+  }
+}
+
+@include keyframe(moveUpDown) {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: 2vw;
+  }
+}
+
+@include keyframe(fadeIn) {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

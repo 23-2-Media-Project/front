@@ -1,9 +1,16 @@
 import React, { useCallback, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { ReactComponent as ArrowIcon } from "../assets/icons/arrow.svg";
 import { ReactComponent as Logo } from "../assets/logo/logo.svg";
+
 import "../styles/StartingPage.scss";
-import { useNavigate } from "react-router-dom";
+
+/* TODO:
+ * [O] 마우스 따라다니는 원형 구현
+ * [O] 그 외의 UI 구현
+ * [O] 페이드 애니메이션 구현
+ */
 
 const StartingPage = () => {
   const navigate = useNavigate();
