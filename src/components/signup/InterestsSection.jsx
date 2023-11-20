@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import "../../styles/SignupPage.scss";
 import { useNavigate } from "react-router-dom";
 
@@ -54,7 +54,40 @@ const interestsList = [
 ];
 
 const InterestsSection = () => {
+  const [clickTimes, setClickTimes] = useState(0);
+  const [isActive, setIsActive] = useState(false);
+
   const navigate = useNavigate();
+
+  const handleClick = useCallback(
+    (e) => {
+      // 3개까지만 선택 가능
+      const elmClassList = e.target.classList.value.split(" ");
+      if (clickTimes < 3 && !elmClassList.includes("clicked-element")) {
+        e.target.classList.add("clicked-element");
+        setClickTimes((prevClickTimes) => prevClickTimes + 1);
+      } else {
+        e.target.classList.remove("clicked-element");
+        setClickTimes((prevClickTimes) => prevClickTimes - 1);
+      }
+
+      console.log(clickTimes);
+    },
+    [clickTimes]
+  );
+
+  const handleIsActive = () => {
+    if (clickTimes > 0) {
+      setIsActive(true);
+    } else {
+      setIsActive(false);
+    }
+  };
+
+  useEffect(() => {
+    handleIsActive();
+  }, [clickTimes]);
+
   const GoToMainPage = () => {
     navigate("/main");
   };
@@ -63,12 +96,25 @@ const InterestsSection = () => {
       <span className="title">관심 있는 주제를 선택하시오.</span>
       <div className="interest-wrap">
         {interestsList.map((interest) => {
-          return <div className="interest-element">{interest}</div>;
+          return (
+            <div className="interest-element" onClick={handleClick}>
+              {interest}
+            </div>
+          );
         })}
       </div>
-      <button className="interest-submit-btn" onClick={GoToMainPage}>
-        확인
-      </button>
+      {isActive ? (
+        <button
+          className="interest-submit-btn active-submit-btn"
+          onClick={GoToMainPage}
+        >
+          확인
+        </button>
+      ) : (
+        <button className="interest-submit-btn" onClick={GoToMainPage}>
+          확인
+        </button>
+      )}
     </section>
   );
 };
