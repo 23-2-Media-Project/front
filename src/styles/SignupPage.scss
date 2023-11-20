@@ -45,7 +45,7 @@
         transition: opacity 0.3s;
 
         &:hover {
-          opacity: 0.6;
+          opacity: 0.5;
         }
         &:last-child {
           background-color: #06be34;
@@ -61,6 +61,72 @@
           font-weight: 450;
         }
       }
+    }
+  }
+
+  .interests-wrap {
+    display: flex;
+    flex-direction: column;
+    margin: auto auto;
+    width: 30vw;
+    gap: 30px;
+
+    .title {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .interest-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px 10px;
+      height: 170px;
+      overflow: auto;
+
+      &::-webkit-scrollbar {
+        display: block;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: #ededed;
+        border-radius: 6.8px;
+        background-clip: padding-box;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+      }
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      .interest-element {
+        width: max-content;
+        padding: 6px 12px;
+        border-radius: 50px;
+        background-color: #ededed;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 500;
+
+        &:hover {
+          opacity: 0.6;
+          transition: 0.3s;
+        }
+      }
+      .clicked-element {
+        background-color: #000;
+        color: #fff;
+      }
+    }
+    .interest-submit-btn {
+      padding: 8px 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .active-submit-btn {
+      background-color: #000;
+      color: #fff;
     }
   }
 }
