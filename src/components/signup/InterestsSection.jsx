@@ -53,7 +53,7 @@ const InterestsSection = () => {
   const handleIsActive = () => {
     if (clickTimes > 0) {
       setIsActive(true);
-    } else {
+    } else if (clickTimes === 0) {
       setIsActive(false);
     }
   };
@@ -89,9 +89,7 @@ const InterestsSection = () => {
           확인
         </button>
       ) : (
-        <button className="interest-submit-btn" onClick={GoToMainPage}>
-          확인
-        </button>
+        <button className="interest-submit-btn">확인</button>
       )}
     </section>
   );
