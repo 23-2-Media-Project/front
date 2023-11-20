@@ -27,30 +27,6 @@ const interestsList = [
   "캐릭터",
   "사진",
   "취미",
-  "예술",
-  "문화",
-  "다양성",
-  "교육",
-  "음식 및 음료",
-  "여행",
-  "자연",
-  "스토리",
-  "미디어",
-  "플랫폼",
-  "미래지향",
-  "인터랙티브",
-  "기념적인",
-  "감성적인",
-  "자연친화적인",
-  "공익적인",
-  "지속가능성",
-  "기술",
-  "우주",
-  "사랑",
-  "게임",
-  "캐릭터",
-  "사진",
-  "취미",
 ];
 
 const InterestsSection = () => {
@@ -65,13 +41,11 @@ const InterestsSection = () => {
       const elmClassList = e.target.classList.value.split(" ");
       if (clickTimes < 3 && !elmClassList.includes("clicked-element")) {
         e.target.classList.add("clicked-element");
-        setClickTimes((prevClickTimes) => prevClickTimes + 1);
-      } else {
+        setClickTimes(clickTimes + 1);
+      } else if (elmClassList.includes("clicked-element")) {
         e.target.classList.remove("clicked-element");
-        setClickTimes((prevClickTimes) => prevClickTimes - 1);
+        setClickTimes(clickTimes - 1);
       }
-
-      console.log(clickTimes);
     },
     [clickTimes]
   );
@@ -97,7 +71,11 @@ const InterestsSection = () => {
       <div className="interest-wrap">
         {interestsList.map((interest) => {
           return (
-            <div className="interest-element" onClick={handleClick}>
+            <div
+              key={interest}
+              className="interest-element"
+              onClick={handleClick}
+            >
               {interest}
             </div>
           );
