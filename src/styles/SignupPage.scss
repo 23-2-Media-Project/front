@@ -111,13 +111,22 @@
           transition: 0.3s;
         }
       }
+      .clicked-element {
+        background-color: #000;
+        color: #fff;
+      }
     }
     .interest-submit-btn {
       padding: 8px 10px;
       border: none;
+      border-radius: 4px;
       cursor: pointer;
       font-size: 14px;
       font-weight: 500;
+    }
+    .active-submit-btn {
+      background-color: #000;
+      color: #fff;
     }
   }
 }
