@@ -1,7 +1,9 @@
 import React from "react";
 
+import "../styles/MonthlyExhibitionPage.scss";
+
 const MonthlyExhibitionPage = () => {
-  return <div>MonthlyExhibitionPage</div>;
+  return <div className="monthly-container">MonthlyExhibitionPage</div>;
 };
 
 export default MonthlyExhibitionPage;
