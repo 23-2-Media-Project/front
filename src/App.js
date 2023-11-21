@@ -1,4 +1,5 @@
 import { Route, Routes, useLocation } from "react-router-dom";
+import { useState } from "react";
 
 import Header from "./components/common/Header";
 import StartingPage from "./pages/StartingPage";
@@ -10,16 +11,22 @@ import MyPage from "./pages/MyPage";
 
 function App() {
   let location = useLocation();
-  console.log(location);
+
+  // 이달의 전시회 헤더 적용 여부에 대한 state
+  const [isShow, setShow] = useState(false);
+
   return (
     <>
-      {location?.pathname !== "/" && <Header />}
+      {location?.pathname !== "/" && location?.pathname !== "/monthly" && (
+        <Header />
+      )}
+      {location?.pathname === "/monthly" && isShow && <Header />}
       <Routes>
         <Route path="/" element={<StartingPage />} />
         <Route path="/main" element={<MainPage />} />
         <Route path="/signup" element={<SignupPage />}></Route>
         <Route path="/exhibition" element={<ExhibitionPage />} />
-        <Route path="/mothly" element={<MonthlyExhibitionPage />} />
+        <Route path="/monthly" element={<MonthlyExhibitionPage />} />
         <Route path="/mypage" element={<MyPage />} />
       </Routes>
     </>
