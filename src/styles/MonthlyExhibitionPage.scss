@@ -30,6 +30,22 @@
     box-sizing: border-box;
     transition: 0.2s;
 
+    .radial-gradient-circle {
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 40vw;
+      height: 40vw;
+      border-radius: 50%;
+      background: radial-gradient(
+        rgba($color: #f04848, $alpha: 0.5),
+        rgba($color: #7ad088, $alpha: 0.25),
+        transparent,
+        transparent
+      );
+    }
     .arrow-icon {
       width: 7vw;
       cursor: pointer;
@@ -47,6 +63,7 @@
       height: 100%;
       width: max-content;
       display: flex;
+
       flex-direction: column;
       justify-content: center;
       align-items: start;

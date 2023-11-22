@@ -53,6 +53,7 @@ const MonthlyExhibitionPage = () => {
         style={{ opacity: `${isShow ? "1" : "0"}` }}
       >
         <MonthlyContentsSection />
+        <div className="radial-gradient-circle"></div>
       </div>
     </div>
   );
