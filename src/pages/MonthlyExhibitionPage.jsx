@@ -10,6 +10,7 @@ import MonthlyContentsSection from "../components/monthlyExhibition/MonthlyConte
  * [O] 스크롤시 커지는 검은색 원형 구현
  * [O] 스크롤 완료시 가운데 radial 그라디언트 생성
  * [O] 스크롤 완료시 이달의 전시회 내용 및 추천 전시회 구현
+ * [] 전시회 목록 섹션 구현
  */
 const MonthlyExhibitionPage = () => {
   // 스크롤시 크기 변형되는 애니메이션 관련

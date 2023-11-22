@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
@@ -78,6 +78,7 @@ const PageBtnWrap = styled.div`
 `;
 const HeaderWrap = styled.div`
   position: absolute;
+  z-index: 100;
   display: flex;
   align-items: center;
   width: calc(100vw - 60px);
