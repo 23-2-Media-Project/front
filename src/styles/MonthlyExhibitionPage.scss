@@ -217,15 +217,19 @@
 .section2-container {
   position: relative;
   display: flex;
-  align-items: center;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  max-height: max-content;
   background: #000;
   color: #fff;
-  padding: 50px 4vw 50px;
+  padding: 150px 4vw 50px;
   box-sizing: border-box;
+  overflow: auto;
 
   .arrow-icon {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
     position: absolute;
     width: 7vw;
     cursor: pointer;
@@ -238,13 +242,13 @@
   }
   .list-wrap {
     margin: 0 auto;
-    width: max-content;
+    width: 55.8vw;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: center;
-    gap: 2vw;
+    gap: 3vw;
 
     .title {
       color: #fff;
@@ -254,17 +258,16 @@
     .category-wrap {
       display: flex;
       align-items: start;
-      gap: 1vw;
+      justify-content: space-between;
       width: 100%;
 
       .sub-title {
         font-size: 1vw;
         margin-top: 0.2vw;
-        margin-right: 1vw;
       }
       .interests-wrap {
         display: flex;
-        width: 39.5vw;
+        width: 45vw;
         overflow: hidden;
         gap: 0.8vw;
         flex-wrap: wrap;
@@ -293,6 +296,82 @@
         width: 2vw;
         height: 2vw;
         cursor: pointer;
+      }
+    }
+    .middle-line {
+      width: 55.8vw;
+      border-top: 1px dashed rgba($color: #fff, $alpha: 0.5);
+    }
+    .content-box-wrap {
+      display: flex;
+      flex-wrap: wrap;
+
+      .content-box {
+        cursor: pointer;
+        width: 13.2vw;
+        height: 8vw;
+        background-color: #ededed;
+        border-radius: 3px;
+        margin: 0 1vw 1vw 0;
+
+        &:nth-child(4n) {
+          margin-right: 0;
+        }
+        .hover-wrap {
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0%;
+          border-radius: 3px;
+          padding: 1.2vw;
+          box-sizing: border-box;
+
+          &.active {
+            opacity: 100%;
+            background-color: rgba($color: #8b63f7, $alpha: 0.3);
+            transition: 0.3s;
+          }
+          .hover-contents {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+
+            .title-wrap {
+              display: flex;
+              flex-direction: column;
+              align-items: start;
+              gap: 0.5vw;
+
+              .title {
+                color: #333;
+                font-size: 1vw;
+                font-weight: 500;
+              }
+              .topic {
+                color: #fff;
+                font-size: 0.8vw;
+                background-color: rgba($color: #333, $alpha: 0.5);
+                padding: 0.3vw 0.6vw;
+                border-radius: 50px;
+              }
+            }
+            .icon-wrap {
+              display: flex;
+              align-items: center;
+              gap: 0.3vw;
+              margin-left: auto;
+
+              .like-count {
+                color: #333;
+                font-size: 0.8vw;
+              }
+            }
+          }
+        }
       }
     }
   }
