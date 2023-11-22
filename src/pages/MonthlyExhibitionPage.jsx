@@ -33,7 +33,7 @@ const MonthlyExhibitionPage = () => {
   }, []);
   // 현재 스크롤 위치가 0보다 크면 isShow state true 아니면 false
   useEffect(() => {
-    if (position > 0) {
+    if (position > 0.5) {
       setIsShow(true);
     } else {
       setIsShow(false);
