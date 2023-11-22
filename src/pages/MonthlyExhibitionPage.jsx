@@ -3,6 +3,13 @@ import { motion, useTransform, useScroll, useMotionValue } from "framer-motion";
 
 import "../styles/MonthlyExhibitionPage.scss";
 
+import MonthlyContentsSection from "../components/monthlyExhibition/MonthlyContentsSection";
+
+/* TODO:
+ * [] 배경 linear-gradient 적용
+ * [] 스크롤시 커지는 검은색 원형 구현
+ * [] 상세 내용
+ */
 const MonthlyExhibitionPage = () => {
   // 스크롤시 크기 변형되는 애니메이션 관련
   const x = useMotionValue(0);
@@ -45,7 +52,7 @@ const MonthlyExhibitionPage = () => {
         className="circle-inner-wrap"
         style={{ opacity: `${isShow ? "1" : "0"}` }}
       >
-        <button>하이</button>
+        <MonthlyContentsSection />
       </div>
     </div>
   );
