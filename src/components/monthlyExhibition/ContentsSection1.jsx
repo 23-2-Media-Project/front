@@ -34,7 +34,7 @@ const RecommendedExhibition = () => {
   );
 };
 
-const ContentsSection1 = () => {
+const ContentsSection1 = ({ setSection }) => {
   const navigate = useNavigate();
 
   return (
@@ -69,7 +69,10 @@ const ContentsSection1 = () => {
         </div>
       </div>
       <div className="right-wrap">
-        <WhiteArrowIcon className="arrow-icon rotate" />
+        <WhiteArrowIcon
+          className="arrow-icon rotate"
+          onClick={() => navigate("/monthly/list")}
+        />
       </div>
     </>
   );
