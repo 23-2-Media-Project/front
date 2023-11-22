@@ -57,6 +57,7 @@ const ContentsSection2 = () => {
           navigate("/monthly");
         }}
       />
+      <div className="radial-gradient-circle"></div>
       <div className="list-wrap">
         <div className="title">이달의 전시회</div>
         <CategorySelectMenu

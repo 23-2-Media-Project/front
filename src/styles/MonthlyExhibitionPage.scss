@@ -226,11 +226,26 @@
   box-sizing: border-box;
   overflow: auto;
 
+  .radial-gradient-circle {
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    right: -20%;
+    transform: translateY(-50%);
+    width: 35vw;
+    height: 35vw;
+    border-radius: 50%;
+    background: radial-gradient(
+      rgba($color: #f04848, $alpha: 0.4),
+      rgba($color: #7ad088, $alpha: 0.25),
+      transparent,
+      transparent
+    );
+  }
   .arrow-icon {
     position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    position: absolute;
+    top: calc(50%);
+    transform: translateY(calc(-50%));
     width: 7vw;
     cursor: pointer;
     opacity: 0.5;

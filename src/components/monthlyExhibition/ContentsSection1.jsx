@@ -34,7 +34,7 @@ const RecommendedExhibition = () => {
   );
 };
 
-const ContentsSection1 = ({ setSection }) => {
+const ContentsSection1 = () => {
   const navigate = useNavigate();
 
   return (
