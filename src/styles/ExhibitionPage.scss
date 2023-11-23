@@ -51,7 +51,7 @@
             display: flex;
             gap: 0.8vw;
             flex-wrap: wrap;
-            width: 50vw;
+            width: 48vw;
 
             .content-btn {
               cursor: pointer;
@@ -75,9 +75,13 @@
         }
       }
       .expand-btn {
-        width: 1vw;
-        height: 1vw;
+        width: 1.5vw;
+        height: 1.5vw;
         cursor: pointer;
+
+        &:hover {
+          opacity: 0.5;
+        }
       }
     }
     .middle-line {
