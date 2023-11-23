@@ -6,22 +6,7 @@ import { ReactComponent as FavoriteIcon } from "../../assets/icons/favorite.svg"
 import { ReactComponent as ShareIcon } from "../../assets/icons/share.svg";
 
 import CategorySelectMenu from "./CategorySelectMenu";
-
-const HoverContents = () => {
-  return (
-    <div className="hover-contents">
-      <div className="title-wrap">
-        <div className="title">전시회 제목</div>
-        <div className="topic">전시분야</div>
-      </div>
-      <div className="icon-wrap">
-        <FavoriteIcon style={{ width: "0.8vw" }} />
-        <div className="like-count">99</div>
-        <ShareIcon style={{ width: "0.8vw" }} />
-      </div>
-    </div>
-  );
-};
+import ListHoverContents from "../common/ListHoverContents";
 
 const ContentsSection2 = () => {
   const navigate = useNavigate();
@@ -79,7 +64,7 @@ const ContentsSection2 = () => {
               }}
             >
               <div className={`hover-wrap ${hoverIdx === idx && "active"}`}>
-                <HoverContents />
+                <ListHoverContents />
               </div>
             </div>
           ))}

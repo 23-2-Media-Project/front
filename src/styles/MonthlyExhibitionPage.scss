@@ -347,45 +347,6 @@
             background-color: rgba($color: #8b63f7, $alpha: 0.3);
             transition: 0.3s;
           }
-          .hover-contents {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: start;
-
-            .title-wrap {
-              display: flex;
-              flex-direction: column;
-              align-items: start;
-              gap: 0.5vw;
-
-              .title {
-                color: #333;
-                font-size: 1vw;
-                font-weight: 500;
-              }
-              .topic {
-                color: #fff;
-                font-size: 0.8vw;
-                background-color: rgba($color: #333, $alpha: 0.5);
-                padding: 0.3vw 0.6vw;
-                border-radius: 50px;
-              }
-            }
-            .icon-wrap {
-              display: flex;
-              align-items: center;
-              gap: 0.3vw;
-              margin-left: auto;
-
-              .like-count {
-                color: #333;
-                font-size: 0.8vw;
-              }
-            }
-          }
         }
       }
     }
