@@ -42,6 +42,7 @@ const SubjectList = [
 const DefaultInfo = () => {
   const [fieldClickTimes, setFieldClickTimes] = useState(0);
   const [subjectClickTimes, setSubjectClickTimes] = useState(0);
+  const [fileName, setFileName] = useState("");
 
   const handleFieldClick = useCallback(
     (e) => {
@@ -72,6 +73,10 @@ const DefaultInfo = () => {
     },
     [subjectClickTimes]
   );
+
+  const handleOnchangeFile = (e) => {
+    setFileName(e.target.value);
+  };
 
   return (
     <>
@@ -128,11 +133,12 @@ const DefaultInfo = () => {
               <input
                 className="upload-name"
                 placeholder="썸네일을 선택하세요.(사이즈 제한 456*300)"
+                value={fileName}
                 disabled
                 required
               />
               <label htmlFor="file">찾아보기</label>
-              <input type="file" id="file" />
+              <input type="file" id="file" onChange={handleOnchangeFile} />
             </div>
 
             {/* 참고 https://velog.io/@sklove96/inputtypefile-%EC%BB%A4%EC%8A%A4%ED%85%80%ED%95%98%EA%B8%B0 */}
