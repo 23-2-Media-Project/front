@@ -41,7 +41,7 @@ const MyPage = () => {
       </Link> */}
       <div className="right-wrap">
         <TabMenu menuArr={menuArr} setTab={setTab} currentTab={currentTab} />
-        <div>{menuArr[currentTab].content}</div>
+        <div className="menu-contents-wrap">{menuArr[currentTab].content}</div>
       </div>
     </div>
   );
