@@ -15,7 +15,7 @@ const UserInfoBox = () => {
         <div className="btn-text">프로필 수정</div>
       </button>
       <div className="email-wrap">
-        <MailSvg style={{ width: ".9vw" }} />
+        <MailSvg style={{ width: ".8vw", height: ".8vw" }} />
         <div className="email">artwalk@ajou.ac.kr</div>
       </div>
       <div className="links-wrap">
