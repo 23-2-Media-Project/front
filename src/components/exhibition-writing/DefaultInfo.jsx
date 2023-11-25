@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { ReactComponent as ArrowIcon } from "../../assets/icons/arrow_forward_ios.svg";
 import "../../styles/ExhibitionWritingPage.scss";
 
@@ -86,10 +86,10 @@ const DefaultInfo = () => {
   };
 
   // 다음 버튼 활성화 관련 함수
-  const handleSetIsActive = useCallback(() => {
+  const handleSetIsActive = () => {
     if (
-      fieldClickTimes > 1 &&
-      subjectClickTimes > 1 &&
+      fieldClickTimes > 0 &&
+      subjectClickTimes > 0 &&
       fileName !== "" &&
       exhibitionTitle !== ""
     ) {
@@ -97,6 +97,10 @@ const DefaultInfo = () => {
     } else {
       setIsActive(false);
     }
+  };
+
+  useEffect(() => {
+    handleSetIsActive();
   }, [fieldClickTimes, subjectClickTimes, fileName, exhibitionTitle]);
 
   return (
@@ -169,7 +173,7 @@ const DefaultInfo = () => {
               <div className="step-two"></div>
               <div className="step-three"></div>
             </div>
-            <button className="next-button" onClick={handleSetIsActive}>
+            <button className="next-button" disabled={!isActive}>
               <span className="button-text">다음</span>
               <ArrowIcon />
             </button>
