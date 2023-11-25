@@ -139,6 +139,7 @@
     }
     .go-to-next-section {
       width: 100%;
+      margin-top: 70px;
       padding-left: 20px;
       display: flex;
       justify-content: space-between;
@@ -148,8 +149,7 @@
         display: grid;
         grid-template-rows: repeat(3, 1fr);
         width: 85%;
-        height: 4px;
-        margin-top: 40px;
+        height: 5px;
 
         .step-one {
           background-color: #000000;
