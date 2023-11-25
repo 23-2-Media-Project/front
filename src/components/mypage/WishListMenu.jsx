@@ -2,6 +2,7 @@ import React, { useCallback, useState } from "react";
 
 import { ReactComponent as PurpleFavoriteSvg } from "../../assets/icons/favorite-purple.svg";
 import { ReactComponent as CartSvg } from "../../assets/icons/cart.svg";
+import AddCartModal from "../common/AddCartModal";
 
 const WishListMenu = () => {
   // 좋아요 버튼 클릭 관련
@@ -19,6 +20,9 @@ const WishListMenu = () => {
     },
     [clickTimes]
   );
+
+  // 장바구니 버튼 클릭 여부
+  const [clickCart, setClickCart] = useState(false);
 
   return (
     <div className="wish-list-wrap">
@@ -40,11 +44,16 @@ const WishListMenu = () => {
                   <div className="real">{item?.real}</div>
                 </div>
               </div>
-              <CartSvg className="cart-icon" style={{ width: "1.8vw" }} />
+              <CartSvg
+                className="cart-icon"
+                style={{ width: "1.8vw" }}
+                onClick={() => setClickCart(true)}
+              />
             </div>
           </div>
         );
       })}
+      {clickCart && <AddCartModal setClickCart={setClickCart} />}
     </div>
   );
 };
