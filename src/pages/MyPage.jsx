@@ -14,9 +14,9 @@ import PurchaseHistoryMenu from "../components/mypage/PurchaseHistoryMenu";
 /* TODO:
  * [O] 사용자 정보 박스 구현
  * [O] 메뉴 탭바 구현
- * [] 나의 전시회 메뉴 구현
- * [] 좋아요한 전시회 메뉴 구현
- * [] 방명록 전시회 메뉴 구현
+ * [O] 나의 전시회 메뉴 구현
+ * [O] 좋아요한 전시회 메뉴 구현
+ * [O] 방명록 전시회 메뉴 구현
  * [] 위시리스트 메뉴 구현
  * [] 구매내역 메뉴 구현
  */
