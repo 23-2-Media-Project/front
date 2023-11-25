@@ -125,8 +125,8 @@
         background: rgba($color: #ededed, $alpha: 0.8); /* 스크롤바의 색상 */
         border-radius: 6.8px;
         background-clip: padding-box;
-        border-left: 0.45vw solid transparent;
-        border-right: 0.45vw solid transparent;
+        border-left: 6.2px solid transparent;
+        border-right: 6.2px solid transparent;
       }
       &::-webkit-scrollbar-track {
         margin: 1.5vw 0 0;
