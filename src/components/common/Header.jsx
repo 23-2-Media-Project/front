@@ -19,7 +19,7 @@ const Header = () => {
   return (
     <HeaderWrap>
       <Link to="/">
-        <Logo style={{ width: "50px" }} />
+        <Logo style={{ width: "2.6vw" }} />
       </Link>
       <PageBtnWrap>
         {location?.pathname === "/main" ? (
@@ -54,7 +54,7 @@ const SignupBtn = styled(Link)`
   text-decoration: none;
   cursor: pointer;
   color: #a88bf7;
-  font-size: 14px;
+  font-size: 0.8vw;
 `;
 const PageBtn = styled(Link)`
   text-decoration: none;
@@ -74,7 +74,7 @@ const PageBlurBtn = styled(Link)`
 const PageBtnWrap = styled.div`
   display: flex;
   gap: 5vw;
-  font-size: 14px;
+  font-size: 0.8vw;
 `;
 const HeaderWrap = styled.div`
   position: absolute;
@@ -82,11 +82,11 @@ const HeaderWrap = styled.div`
   display: flex;
   align-items: center;
   width: calc(100vw - 60px);
-  height: 60px;
+  height: 3.5vw;
   margin: 30px;
   background-color: #000;
   border-radius: 100px;
-  padding-left: 20px;
+  padding-left: 1.3vw;
   box-sizing: border-box;
 `;
 
