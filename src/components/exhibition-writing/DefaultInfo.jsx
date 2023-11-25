@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { ReactComponent as ArrowIcon } from "../../assets/icons/arrow_forward_ios.svg";
+import { ReactComponent as ArrowIconDisabled } from "../../assets/icons/arrow_forward_ios_disabled.svg";
 import "../../styles/ExhibitionWritingPage.scss";
 
 const FieldList = [
@@ -173,10 +174,17 @@ const DefaultInfo = () => {
               <div className="step-two"></div>
               <div className="step-three"></div>
             </div>
-            <button className="next-button" disabled={!isActive}>
-              <span className="button-text">다음</span>
-              <ArrowIcon />
-            </button>
+            {isActive ? (
+              <button className="next-button">
+                <span className="button-text">다음</span>
+                <ArrowIcon />
+              </button>
+            ) : (
+              <button className="next-button" disabled={!isActive}>
+                <span className="button-text">다음</span>
+                <ArrowIconDisabled />
+              </button>
+            )}
           </section>
         </div>
       </article>
