@@ -1,0 +1,190 @@
+.exhibition-container {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  min-width: 100vw;
+  max-width: max-content;
+  min-height: 100vh;
+  max-height: max-content;
+  background-color: #fff;
+  padding: 140px 100px 50px;
+  box-sizing: border-box;
+
+  .list-wrap {
+    margin: 0 auto;
+    width: 55.8vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 2.5vw;
+
+    .title-wrap {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .title {
+        color: #333;
+        font-size: 1.1vw;
+        font-weight: 600;
+      }
+      .filter-btn {
+        position: relative;
+        width: 5vw;
+        height: 1.8vw;
+        border: 1px solid #dedede;
+        border-radius: 50px;
+        transition: 0.3s;
+
+        .filter-btn-contents {
+          width: 100%;
+          height: 100%;
+          border-radius: 50px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.3vw;
+          font-size: 0.8vw;
+          font-weight: 500;
+          color: #333;
+
+          &:hover {
+            background-color: #dedede;
+          }
+        }
+        .filter-dropdown {
+          position: absolute;
+          height: max-content;
+          z-index: 2;
+          top: 3vw;
+          border: 1px solid #dedede;
+          border-radius: 3px;
+          background-color: #fff;
+
+          .option-text {
+            height: 1.8vw;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 5vw;
+            font-size: 0.8vw;
+            font-weight: 500;
+            border-bottom: 1px solid #dedede;
+
+            &:last-child {
+              padding-bottom: 0;
+              margin-bottom: 0;
+              border-bottom: 0;
+            }
+            &:hover {
+              opacity: 0.5;
+            }
+            &.active {
+              background-color: #ededed;
+            }
+          }
+        }
+      }
+    }
+    .select-menu-wrap {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      overflow: hidden;
+
+      .filters-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+
+        .filter-wrap {
+          display: flex;
+          align-items: start;
+          justify-content: space-between;
+
+          .sub-title {
+            font-size: 1vw;
+            margin-top: 0.2vw;
+            margin-right: 3vw;
+          }
+          .contents-wrap {
+            display: flex;
+            gap: 0.8vw;
+            flex-wrap: wrap;
+            width: 48vw;
+
+            .content-btn {
+              cursor: pointer;
+              font-size: 0.8vw;
+              width: max-content;
+              padding: 0.4vw 0.8vw;
+              background-color: #ededed;
+              border-radius: 50px;
+              transition: 0.3s;
+
+              &:hover {
+                opacity: 0.5;
+              }
+              &.clicked {
+                background-color: #333;
+                color: #fff;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+      }
+      .expand-btn {
+        width: 1.5vw;
+        height: 1.5vw;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+    .middle-line {
+      width: 55.8vw;
+      border-top: 1px dashed #dedede;
+    }
+    .content-box-wrap {
+      display: flex;
+      flex-wrap: wrap;
+
+      .content-box {
+        cursor: pointer;
+        width: 13.2vw;
+        height: 8vw;
+        background-color: #ededed;
+        border-radius: 3px;
+        margin: 0 1vw 1vw 0;
+
+        &:nth-child(4n) {
+          margin-right: 0;
+        }
+        .hover-wrap {
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0%;
+          border-radius: 3px;
+          padding: 1.2vw;
+          box-sizing: border-box;
+
+          &.active {
+            opacity: 100%;
+            background-color: rgba($color: #8b63f7, $alpha: 0.3);
+            transition: 0.3s;
+          }
+        }
+      }
+    }
+  }
+}

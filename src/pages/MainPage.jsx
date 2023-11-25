@@ -27,7 +27,7 @@ const MainPage = () => {
           <button
             className="monthly-exhibition-btn"
             onClick={() => {
-              navigate("/mothly");
+              navigate("/monthly");
             }}
           >
             <div className="btn-text white">CHRISTMAS</div>
