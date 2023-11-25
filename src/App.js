@@ -8,6 +8,7 @@ import SignupPage from "./pages/SignupPage";
 import MonthlyExhibitionPage from "./pages/MonthlyExhibitionPage";
 import ExhibitionPage from "./pages/ExhibitionPage";
 import MyPage from "./pages/MyPage";
+import ExhibitionWritingPage from "./pages/ExhibitionWritingPage";
 import ContentsSection2 from "./components/monthlyExhibition/ContentsSection2";
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path="/monthly" element={<MonthlyExhibitionPage />} />
         <Route path="/monthly/list" element={<ContentsSection2 />} />
         <Route path="/mypage" element={<MyPage />} />
+        <Route path="/writing" element={<ExhibitionWritingPage />} />
       </Routes>
     </>
   );
