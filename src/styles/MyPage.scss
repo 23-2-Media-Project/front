@@ -114,8 +114,53 @@
     }
     .menu-contents-wrap {
       height: 100%;
-      padding: 1.5vw 0 0;
+      margin: 1.5vw 0 0;
       box-sizing: border-box;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        display: block;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: rgba($color: #ededed, $alpha: 0.8); /* 스크롤바의 색상 */
+        border-radius: 6.8px;
+        background-clip: padding-box;
+        border-left: 0.45vw solid transparent;
+        border-right: 0.45vw solid transparent;
+      }
+      &::-webkit-scrollbar-track {
+        margin: 1.5vw 0 0;
+        background: transparent;
+      }
+      .my-exhibition-wrap {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1.5vw 0;
+
+        .list {
+          cursor: pointer;
+          position: relative;
+          background-color: #ededed;
+          width: calc(100% / 3 - 1vw);
+          height: 8vw;
+          border-radius: 4px;
+
+          .hover-wrap {
+            height: 100%;
+            opacity: 0;
+            transition: 0.3s;
+            padding: 1vw;
+            box-sizing: border-box;
+            border-radius: 4px;
+
+            &.active {
+              opacity: 1;
+              background-color: rgba($color: #8b63f7, $alpha: 0.3);
+            }
+          }
+        }
+      }
     }
   }
 }
