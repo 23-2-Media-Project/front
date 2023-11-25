@@ -177,12 +177,12 @@ const DefaultInfo = () => {
             {isActive ? (
               <button className="next-button">
                 <span className="button-text">다음</span>
-                <ArrowIcon />
+                <ArrowIcon style={{ width: "1vw" }} />
               </button>
             ) : (
               <button className="next-button" disabled={!isActive}>
                 <span className="button-text">다음</span>
-                <ArrowIconDisabled />
+                <ArrowIconDisabled style={{ width: "1vw" }} />
               </button>
             )}
           </section>
