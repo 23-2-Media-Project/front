@@ -1,5 +1,6 @@
+import React, { useCallback, useState } from "react";
+import { ReactComponent as ArrowIcon } from "../../assets/icons/arrow_forward_ios.svg";
 import "../../styles/ExhibitionWritingPage.scss";
-import { useState, useCallback } from "react";
 
 const FieldList = [
   "그래픽디자인",
@@ -42,7 +43,13 @@ const SubjectList = [
 const DefaultInfo = () => {
   const [fieldClickTimes, setFieldClickTimes] = useState(0);
   const [subjectClickTimes, setSubjectClickTimes] = useState(0);
+  const [exhibitionTitle, setExhibitionTitle] = useState("");
   const [fileName, setFileName] = useState("");
+  const [isActive, setIsActive] = useState(false);
+
+  const handleOnChangeExhibitionTitle = (e) => {
+    setExhibitionTitle(e.target.value);
+  };
 
   const handleFieldClick = useCallback(
     (e) => {
@@ -78,12 +85,27 @@ const DefaultInfo = () => {
     setFileName(e.target.value);
   };
 
+  // 다음 버튼 활성화 관련 함수
+  const handleSetIsActive = useCallback(() => {
+    if (
+      fieldClickTimes > 1 &&
+      subjectClickTimes > 1 &&
+      fileName !== "" &&
+      exhibitionTitle !== ""
+    ) {
+      setIsActive(true);
+    } else {
+      setIsActive(false);
+    }
+  }, [fieldClickTimes, subjectClickTimes, fileName, exhibitionTitle]);
+
   return (
     <>
       <article className="defaultinfo-container">
         <div className="defaultinfo-wrapper">
           <span className="page-title">기본 정보 입력</span>
           <input
+            onChange={handleOnChangeExhibitionTitle}
             className="exhibition-title"
             type="text"
             placeholder="전시회 제목을 입력하세요"
@@ -140,8 +162,17 @@ const DefaultInfo = () => {
               <label htmlFor="file">찾아보기</label>
               <input type="file" id="file" onChange={handleOnchangeFile} />
             </div>
-
-            {/* 참고 https://velog.io/@sklove96/inputtypefile-%EC%BB%A4%EC%8A%A4%ED%85%80%ED%95%98%EA%B8%B0 */}
+          </section>
+          <section className="go-to-next-section">
+            <div className="progress-bar">
+              <div className="step-one"></div>
+              <div className="step-two"></div>
+              <div className="step-three"></div>
+            </div>
+            <button className="next-button" onClick={handleSetIsActive}>
+              <span className="button-text">다음</span>
+              <ArrowIcon />
+            </button>
           </section>
         </div>
       </article>

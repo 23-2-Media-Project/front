@@ -1,7 +1,6 @@
 import React from "react";
-
-import "../styles/ExhibitionWritingPage.scss";
 import DefaultInfo from "../components/exhibition-writing/DefaultInfo";
+import "../styles/ExhibitionWritingPage.scss";
 
 const ExhibitionWritingPage = () => {
   return (
