@@ -131,7 +131,8 @@
       &::-webkit-scrollbar-track {
         background: transparent;
       }
-      .my-exhibition-wrap {
+      .my-exhibition-wrap,
+      .like-exhibition-wrap {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
