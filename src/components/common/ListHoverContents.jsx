@@ -39,7 +39,7 @@ const Topic = styled.div`
 `;
 const Title = styled.div`
   color: #333;
-  font-size: 1vw;
+  font-size: 0.9vw;
   font-weight: 500;
 `;
 const TitleWrap = styled.div`
