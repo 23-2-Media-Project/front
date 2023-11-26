@@ -19,7 +19,7 @@ const CategorySelectMenu = ({ onClickBtn, setClickBtn, handleClick }) => {
       <ExpandIcon
         className="expand-btn"
         style={{
-          transform: `${onClickBtn ? "rotate(180deg)" : "rotate(0deg)"}`,
+          transform: `${onClickBtn ? "rotate(0deg)" : "rotate(180deg)"}`,
         }}
         onClick={() => setClickBtn(!onClickBtn)}
       />
