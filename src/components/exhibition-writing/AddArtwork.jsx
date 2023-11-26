@@ -44,7 +44,7 @@ const AddArtwork = ({ setAddTime, onRemove, setIsActive }) => {
           </span>
           <div className="file-wrapper">
             <input
-              className="upload-name input-area"
+              className="upload-name"
               placeholder="작품 이미지 또는 영상을 선택하세요."
               value={inputFile}
               disabled

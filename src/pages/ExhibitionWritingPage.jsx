@@ -1,28 +1,35 @@
 import React, { useState } from "react";
 import ArtworkInfo from "../components/exhibition-writing/ArtworkInfo";
 import DefaultInfo from "../components/exhibition-writing/DefaultInfo";
+import Merchandise from "../components/exhibition-writing/Merchandise";
 import "../styles/ExhibitionWritingPage.scss";
 
 const ExhibitionWritingPage = () => {
   const [currentPage, setCurrentPage] = useState("default");
 
-  const handleNextPage = () => {
+  const handleMerchandisePage = () => {
+    setCurrentPage("merchandise");
+  };
+
+  const handleArtworkPage = () => {
     setCurrentPage("artwork");
   };
 
-  const handlePrevPage = () => {
+  const handleDefaultInfoPage = () => {
     setCurrentPage("default");
   };
 
   return (
     <div className="writing-container">
       {currentPage === "default" ? (
-        <DefaultInfo handleNextPage={handleNextPage} />
-      ) : (
+        <DefaultInfo handleNextPage={handleArtworkPage} />
+      ) : currentPage === "artwork" ? (
         <ArtworkInfo
-          handlePrevPage={handlePrevPage}
-          handleNextPage={handleNextPage}
+          handlePrevPage={handleDefaultInfoPage}
+          handleNextPage={handleMerchandisePage}
         />
+      ) : (
+        <Merchandise handlePrevPage={handleArtworkPage} />
       )}
     </div>
   );
