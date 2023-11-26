@@ -201,6 +201,19 @@
           }
         }
       }
+      .writing-btn {
+        box-sizing: border-box;
+        padding: 0.6vw 0.8vw;
+        border-radius: 2px;
+        background-color: #8b63f7;
+        color: #fff;
+        font-weight: 500;
+        font-size: 0.7vw;
+        position: absolute;
+        bottom: 0.5vw;
+        right: 0;
+        text-decoration: none;
+      }
     }
     .menu-contents-wrap {
       height: 100%;

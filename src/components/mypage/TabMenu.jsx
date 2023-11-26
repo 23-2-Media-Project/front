@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const TabMenu = ({ menuArr, setTab, currentTab }) => {
   // 탭바 메뉴 클릭 handler 함수
@@ -23,6 +24,9 @@ const TabMenu = ({ menuArr, setTab, currentTab }) => {
           );
         })}
       </div>
+      <Link to={"/writing"} className="writing-btn">
+        작품 업로드하기
+      </Link>
     </div>
   );
 };
