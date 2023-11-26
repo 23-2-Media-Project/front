@@ -193,4 +193,147 @@
       }
     }
   }
+
+  .artwork-info-container {
+    margin: 2vw 0;
+    padding: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+
+    .page-title {
+      font-size: 1.1vw;
+      font-weight: 600;
+      margin-bottom: 3rem;
+    }
+
+    .artwork-info-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 70%;
+      gap: 34px;
+
+      .added-button {
+        background-color: #000;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 2rem;
+        font-size: 0.8vw;
+        gap: 0.6rem;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .add-artwork-container {
+    display: flex;
+    width: 100%;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
+
+    .change-order {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 1.8rem;
+      background-color: #000000;
+    }
+
+    .text-section {
+      display: flex;
+      flex-direction: column;
+      padding: 2.5rem 3rem;
+      gap: 2rem;
+      width: 80%;
+
+      .title {
+        font-size: 1vw;
+        font-weight: 600;
+        margin-right: 3rem;
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        gap: 2px;
+
+        .condition {
+          color: #8b63f7;
+        }
+      }
+
+      .input-area {
+        width: 60%;
+        padding: 0.3rem 1rem;
+        font-size: 0.9vw;
+        font-weight: 500;
+        border: none;
+        outline: none;
+
+        &:placeholder {
+          color: #9e9e9e;
+        }
+      }
+
+      .title-section,
+      .info-section {
+        display: flex;
+        align-items: center;
+      }
+
+      .add-file-section {
+        display: flex;
+
+        .file-wrapper {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+
+          .upload-name {
+            font-size: 0.8vw;
+            width: 50%;
+            height: 40px;
+            padding: 0 10px;
+            border: none;
+            color: #9e9e9e;
+
+            &:disabled {
+              background-color: transparent;
+            }
+          }
+
+          label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.3vw 0.8vw;
+            font-size: 0.9vw !important;
+            font-weight: 600;
+            text-align: center;
+            background-color: #ededed;
+            cursor: pointer;
+            border-radius: 3px;
+            transition: 0.3s;
+
+            &:hover {
+              opacity: 0.5;
+            }
+          }
+
+          input[type="file"] {
+            position: absolute;
+            width: 0;
+            height: 0;
+            padding: 0;
+            overflow: hidden;
+            border: 0;
+          }
+        }
+      }
+    }
+    .close-icon {
+      margin: 1rem;
+      cursor: pointer;
+    }
+  }
 }
