@@ -4,7 +4,7 @@ import { ReactComponent as ArrowIcon } from "../../assets/icons/arrow_forward_io
 import { ReactComponent as ArrowIconDisabled } from "../../assets/icons/arrow_forward_ios_disabled.svg";
 import AddArtwork from "./AddArtwork";
 
-const ArtworkInfo = () => {
+const ArtworkInfo = ({ handlePrevPage, handleNextPage }) => {
   const [addTime, setAddTime] = useState(1);
   const [isActive, setIsActive] = useState(false);
 
@@ -39,7 +39,7 @@ const ArtworkInfo = () => {
         </button>
       </div>
       <section className="go-to-next-section">
-        <button className="prev-button">
+        <button className="prev-button" onClick={handlePrevPage}>
           <span className="button-prev">이전</span>
           <ArrowBack style={{ width: "1vw" }} />
         </button>
@@ -49,7 +49,7 @@ const ArtworkInfo = () => {
           <div className="step-three"></div>
         </div>
         {isActive ? (
-          <button className="next-button">
+          <button className="next-button" onClick={handleNextPage}>
             <span className="button-text">다음</span>
             <ArrowIcon style={{ width: "1vw" }} />
           </button>

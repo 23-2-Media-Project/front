@@ -41,7 +41,7 @@ const SubjectList = [
   "취미",
 ];
 
-const DefaultInfo = () => {
+const DefaultInfo = ({ handleNextPage }) => {
   const [fieldClickTimes, setFieldClickTimes] = useState(0);
   const [subjectClickTimes, setSubjectClickTimes] = useState(0);
   const [exhibitionTitle, setExhibitionTitle] = useState("");
@@ -175,7 +175,7 @@ const DefaultInfo = () => {
               <div className="step-three"></div>
             </div>
             {isActive ? (
-              <button className="next-button">
+              <button className="next-button" onClick={handleNextPage}>
                 <span className="button-text">다음</span>
                 <ArrowIcon style={{ width: "1vw" }} />
               </button>
