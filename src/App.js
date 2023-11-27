@@ -1,15 +1,16 @@
-import { Route, Routes, useLocation } from "react-router-dom";
 import { useState } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 
 import Header from "./components/common/Header";
-import StartingPage from "./pages/StartingPage";
-import MainPage from "./pages/MainPage";
-import SignupPage from "./pages/SignupPage";
-import MonthlyExhibitionPage from "./pages/MonthlyExhibitionPage";
-import ExhibitionPage from "./pages/ExhibitionPage";
-import MyPage from "./pages/MyPage";
-import ExhibitionWritingPage from "./pages/ExhibitionWritingPage";
 import ContentsSection2 from "./components/monthlyExhibition/ContentsSection2";
+import ExhibitionDetailPage from "./pages/ExhibitionDetailPage";
+import ExhibitionPage from "./pages/ExhibitionPage";
+import ExhibitionWritingPage from "./pages/ExhibitionWritingPage";
+import MainPage from "./pages/MainPage";
+import MonthlyExhibitionPage from "./pages/MonthlyExhibitionPage";
+import MyPage from "./pages/MyPage";
+import SignupPage from "./pages/SignupPage";
+import StartingPage from "./pages/StartingPage";
 
 function App() {
   let location = useLocation();
@@ -32,6 +33,7 @@ function App() {
         <Route path="/monthly/list" element={<ContentsSection2 />} />
         <Route path="/mypage" element={<MyPage />} />
         <Route path="/writing" element={<ExhibitionWritingPage />} />
+        <Route path="/detail" element={<ExhibitionDetailPage />} />
       </Routes>
     </>
   );
