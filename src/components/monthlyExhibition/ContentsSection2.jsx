@@ -8,6 +8,8 @@ import { ReactComponent as ShareIcon } from "../../assets/icons/share.svg";
 import CategorySelectMenu from "./CategorySelectMenu";
 import ListHoverContents from "../common/ListHoverContents";
 
+import { exhibitionListData } from "../../consts/exhibitionListData";
+
 const ContentsSection2 = () => {
   const navigate = useNavigate();
 
@@ -52,7 +54,7 @@ const ContentsSection2 = () => {
         />
         <div className="middle-line"></div>
         <div className="content-box-wrap">
-          {boxArr.map((box, idx) => (
+          {exhibitionListData.map((list, idx) => (
             <div
               key={idx}
               className="content-box"
@@ -62,9 +64,13 @@ const ContentsSection2 = () => {
               onMouseLeave={() => {
                 setHoverIdx(-1);
               }}
+              style={{
+                backgroundImage: `url(${list.img})`,
+                backgroundSize: "cover",
+              }}
             >
               <div className={`hover-wrap ${hoverIdx === idx && "active"}`}>
-                <ListHoverContents />
+                <ListHoverContents data={list} />
               </div>
             </div>
           ))}
