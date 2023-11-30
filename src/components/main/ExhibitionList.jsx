@@ -3,22 +3,23 @@ import React, { useState } from "react";
 import { ReactComponent as FavoriteIcon } from "../../assets/icons/favorite.svg";
 import { ReactComponent as ShareIcon } from "../../assets/icons/share.svg";
 
-const HoverContents = () => {
+const HoverContents = ({ data }) => {
+  console.log(data);
   return (
     <div className="hover-contents">
       <div className="title-wrap">
-        <div className="title">전시회 제목</div>
-        <div className="topic">전시분야</div>
+        <div className="title">{data?.name}</div>
+        <div className="topic">{data?.category}</div>
       </div>
       <div className="icon-wrap">
         <FavoriteIcon style={{ width: "22px" }} />
-        <div className="like-count">99</div>
+        <div className="like-count">{data?.like}</div>
         <ShareIcon style={{ width: "22px" }} />
       </div>
     </div>
   );
 };
-const ExhibitionList = ({ title }) => {
+const ExhibitionList = ({ title, data }) => {
   // 마우스 hover 여부 state
   const [hover, setHover] = useState(false);
   const [hover2, setHover2] = useState(false);
@@ -57,9 +58,16 @@ const ExhibitionList = ({ title }) => {
             setHover(false);
           }}
         >
-          <div className={`exhibition-img`}></div>
+          <div
+            className={`exhibition-img`}
+            style={{
+              backgroundImage: `url(${data[0].img})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+            }}
+          ></div>
           <div className={`hover-wrap ${hover && "active"}`}>
-            <HoverContents />
+            <HoverContents data={data[0]} />
           </div>
         </div>
         <div
@@ -71,9 +79,16 @@ const ExhibitionList = ({ title }) => {
             setHover2(false);
           }}
         >
-          <div className={`exhibition-img`}></div>
+          <div
+            className={`exhibition-img`}
+            style={{
+              backgroundImage: `url(${data[1].img})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+            }}
+          ></div>
           <div className={`hover-wrap ${hover2 && "active"}`}>
-            <HoverContents />
+            <HoverContents data={data[1]} />
           </div>
         </div>
         <div
@@ -85,9 +100,16 @@ const ExhibitionList = ({ title }) => {
             setHover3(false);
           }}
         >
-          <div className={`exhibition-img`}></div>
+          <div
+            className={`exhibition-img`}
+            style={{
+              backgroundImage: `url(${data[2].img})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+            }}
+          ></div>
           <div className={`hover-wrap ${hover3 && "active"}`}>
-            <HoverContents />
+            <HoverContents data={data[2]} />
           </div>
         </div>
       </div>

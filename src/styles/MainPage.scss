@@ -144,7 +144,6 @@
           .exhibition-img {
             width: 250px;
             height: 150px;
-            background-color: #ededed;
             border-radius: 5px;
           }
           .hover-wrap {
@@ -161,7 +160,7 @@
 
             &.active {
               opacity: 100%;
-              background-color: rgba($color: #8b63f7, $alpha: 0.3);
+              background-color: rgba($color: #a88bf7, $alpha: 0.8);
               transition: 0.3s;
             }
             .hover-contents {

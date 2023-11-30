@@ -7,6 +7,12 @@ import "../styles/MainPage.scss";
 
 import ExhibitionList from "../components/main/ExhibitionList";
 
+import {
+  mainExhibitionData,
+  mainExhibitionData2,
+  mainExhibitionData3,
+} from "../consts/mainExhibitionData";
+
 /* TODO:
  * [O] 3D 로고 애니메이션 적용
  * [O] 이달의 전시회 버튼 컴포넌트 구현
@@ -37,9 +43,9 @@ const MainPage = () => {
         </div>
       </div>
       <div className="right-wrap">
-        <ExhibitionList title={"추천 전시회"} />
-        <ExhibitionList title={"인기 전시회"} />
-        <ExhibitionList title={"최신 전시회"} />
+        <ExhibitionList title={"추천 전시회"} data={mainExhibitionData} />
+        <ExhibitionList title={"인기 전시회"} data={mainExhibitionData2} />
+        <ExhibitionList title={"최신 전시회"} data={mainExhibitionData3} />
       </div>
     </div>
   );
