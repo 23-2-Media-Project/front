@@ -4,16 +4,16 @@ import styled from "styled-components";
 import { ReactComponent as FavoriteIcon } from "../../assets/icons/favorite.svg";
 import { ReactComponent as ShareIcon } from "../../assets/icons/share.svg";
 
-const ListHoverContents = () => {
+const ListHoverContents = ({ data }) => {
   return (
     <HoverContets>
       <TitleWrap>
-        <Title>전시회 제목</Title>
-        <Topic>전시분야</Topic>
+        <Title>{data.name}</Title>
+        <Topic>{data.category}</Topic>
       </TitleWrap>
       <IconWrap>
         <FavoriteIcon style={{ width: "0.8vw" }} />
-        <LikeCountText>99</LikeCountText>
+        <LikeCountText>{data.like}</LikeCountText>
         <ShareIcon style={{ width: "0.8vw" }} />
       </IconWrap>
     </HoverContets>

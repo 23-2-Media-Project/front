@@ -7,6 +7,8 @@ import { ReactComponent as FilterIcon } from "../assets/icons/filter.svg";
 import ListHoverContents from "../components/common/ListHoverContents";
 import TopicCategorySelectMenu from "../components/exhibition/TopicCategorySelectMenu";
 
+import { exhibitionListData } from "../consts/exhibitionListData";
+
 /* TODO:
  * [O] 최신순, 인기순, 필터링 버튼 및 툴팁 구현
  * [O] 주제 및 분야 선택 아코디언 메뉴 구현
@@ -14,8 +16,6 @@ import TopicCategorySelectMenu from "../components/exhibition/TopicCategorySelec
  */
 
 const ExhibitionPage = () => {
-  const boxArr = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
-
   // 분야 버튼 선택 관련 로직
   const [clickTimes, setClickTimes] = useState(0);
   const handleClick = useCallback(
@@ -84,9 +84,9 @@ const ExhibitionPage = () => {
         />
         <div className="middle-line"></div>
         <div className="content-box-wrap">
-          {boxArr.map((box, idx) => (
+          {exhibitionListData.map((data, idx) => (
             <div
-              key={idx}
+              key={data.name}
               className="content-box"
               onMouseOver={() => {
                 setHoverIdx(idx);
@@ -94,9 +94,13 @@ const ExhibitionPage = () => {
               onMouseLeave={() => {
                 setHoverIdx(-1);
               }}
+              style={{
+                backgroundImage: `url(${data.img})`,
+                backgroundSize: "cover",
+              }}
             >
               <div className={`hover-wrap ${hoverIdx === idx && "active"}`}>
-                <ListHoverContents />
+                <ListHoverContents data={data} />
               </div>
             </div>
           ))}
