@@ -98,7 +98,7 @@
   max-height: max-content;
   background-color: #fff;
   color: #333;
-  padding: 140px 55px 50px;
+  padding: 11vw 6vw 5vw;
   box-sizing: border-box;
 
   .user-box-wrap {
@@ -131,6 +131,8 @@
       margin-bottom: 1.8vw;
     }
     .info-edit-btn {
+      color: #333;
+      text-decoration: none;
       margin-bottom: 1.8vw;
       width: 100%;
       display: flex;
@@ -157,6 +159,7 @@
       margin-bottom: 1vw;
     }
     .links-wrap {
+      cursor: pointer;
       width: 100%;
       display: flex;
       flex-direction: column;
