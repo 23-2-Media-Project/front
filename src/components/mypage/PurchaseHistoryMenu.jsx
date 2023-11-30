@@ -4,6 +4,8 @@ import { ko } from "date-fns/esm/locale";
 
 import { ReactComponent as CalendarSvg } from "../../assets/icons/calendar.svg";
 
+import { purchaseListData } from "../../consts/purchaseListData";
+
 const PurchaseHistoryMenu = () => {
   const [startDate, setStartDate] = useState(new Date());
   return (
@@ -49,19 +51,25 @@ const PurchaseHistoryMenu = () => {
             주문처리상태
           </th>
         </thead>
-        {purchaseItems.map((item, index) => {
+        {purchaseListData.map((item, index) => {
           return (
             <tbody className="table-body">
               <td rowSpan={item.lists.length} className="order-num">
-                <div>2023-11-14</div>
-                <div>[20231114-0011866]</div>
+                <div>{item.date}</div>
+                <div>[{item.orderNum}]</div>
               </td>
               <td className="order-lists">
                 {item.lists.map((list) => {
                   return (
                     <div className="order-list">
                       <td className="order-info">
-                        <div className="order-img"></div>
+                        <div
+                          className="order-img"
+                          style={{
+                            backgroundImage: `url(${list.img})`,
+                            backgroundSize: "cover",
+                          }}
+                        ></div>
                         <div className="order-name-real">
                           <div className="order-name">{list.name}</div>
                           <div className="order-real">{list.real}</div>
@@ -83,46 +91,3 @@ const PurchaseHistoryMenu = () => {
 };
 
 export default PurchaseHistoryMenu;
-
-const purchaseItems = [
-  {
-    date: "2023-11-14",
-    orderNum: "20231114-0011866",
-    lists: [
-      {
-        count: 1,
-        name: "스티브 캐릭터 3D 모델링",
-        real: "비실물",
-        price: "15,000원",
-        state: "배송완료",
-      },
-      {
-        count: 1,
-        name: "아이스크림 3D 모델링",
-        real: "비실물",
-        price: "15,000원",
-        state: "배송완료",
-      },
-    ],
-  },
-  {
-    date: "2023-11-14",
-    orderNum: "20231114-0011866",
-    lists: [
-      {
-        count: 1,
-        name: "스티브 캐릭터 3D 모델링",
-        real: "비실물",
-        price: "15,000원",
-        state: "배송완료",
-      },
-      {
-        count: 1,
-        name: "아이스크림 3D 모델링",
-        real: "비실물",
-        price: "15,000원",
-        state: "배송완료",
-      },
-    ],
-  },
-];

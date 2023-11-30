@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from "react";
+
 import { ReactComponent as ArrowBack } from "../../assets/icons/arrow_back_ios.svg";
 import { ReactComponent as ArrowIcon } from "../../assets/icons/arrow_forward_ios.svg";
 import { ReactComponent as ArrowIconDisabled } from "../../assets/icons/arrow_forward_ios_disabled.svg";
+
 import AddArtwork from "./AddArtwork";
 
 const ArtworkInfo = ({ handlePrevPage, handleNextPage }) => {

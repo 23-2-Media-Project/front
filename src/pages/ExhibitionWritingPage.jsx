@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+
 import ArtworkInfo from "../components/exhibition-writing/ArtworkInfo";
 import DefaultInfo from "../components/exhibition-writing/DefaultInfo";
 import Merchandise from "../components/exhibition-writing/Merchandise";
+
 import "../styles/ExhibitionWritingPage.scss";
 
 const ExhibitionWritingPage = () => {

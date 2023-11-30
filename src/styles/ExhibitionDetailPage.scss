@@ -83,8 +83,7 @@
       // 이미지 사이즈 정해 속성 변경
       .artwork-img {
         width: 100%;
-        height: 50vh;
-        object-fit: cover;
+        height: max-content;
       }
     }
 

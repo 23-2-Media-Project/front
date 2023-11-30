@@ -5,27 +5,29 @@ import { ReactComponent as WhiteArrowIcon } from "../../assets/icons/white-arrow
 import { ReactComponent as FavoriteIcon } from "../../assets/icons/white-favorite.svg";
 import { ReactComponent as ShareIcon } from "../../assets/icons/white-share.svg";
 
-const RecommendedExhibition = () => {
+import { monthlyData } from "../../consts/monthlyData";
+
+const RecommendedExhibition = ({ data }) => {
   return (
     <div className="recommended-wrap">
-      <div className="img"></div>
+      <div
+        className="img"
+        style={{
+          backgroundImage: `url(${data.img})`,
+          backgroundSize: "contain",
+        }}
+      ></div>
       <div className="text-wrap">
         <div className="main-text-wrap">
-          <div className="title">전시회 이름</div>
-          <div className="name">작가명</div>
+          <div className="title">{data.title}</div>
+          <div className="name">{data.artist}</div>
         </div>
         <div className="sub-text-wrap">
-          <div className="category">전시 분야</div>
-          <div className="desc">
-            이 부분은 전시회 설명입니다!!!!!!!!!!!!!이 부분은 전시회
-            설명입니다!!!!!!!!!!!!!이 부분은 전시회 설명입니다!!!!!!!!!!!!!이
-            부분은 전시회 설명입니다!!!!!!!!!!!!!이 부분은 전시회
-            설명입니다!!!!!!!!!!!!! 이 부분은 전시회 설명입니다!!!!!!!!!!!!!이
-            부분은 전시회 설명입니다!!!!!!!!!!!!!
-          </div>
+          <div className="category">{data.category}</div>
+          <div className="desc">{data.desc}</div>
           <div className="icon-wrap">
             <FavoriteIcon style={{ width: "1vw", fill: "#fff" }} />
-            <div className="like-count">99</div>
+            <div className="like-count">{data.like}</div>
             <ShareIcon style={{ width: "0.8vw" }} />
           </div>
         </div>
@@ -64,8 +66,8 @@ const ContentsSection1 = () => {
           </div>
         </div>
         <div className="middle-bottom-wrap">
-          <RecommendedExhibition />
-          <RecommendedExhibition />
+          <RecommendedExhibition data={monthlyData[0]} />
+          <RecommendedExhibition data={monthlyData[1]} />
         </div>
       </div>
       <div className="right-wrap">

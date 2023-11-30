@@ -190,7 +190,8 @@
         gap: 2vw;
 
         .menu-text {
-          font-size: 1vw;
+          cursor: pointer;
+          font-size: 0.9vw;
           font-weight: 500;
           padding-bottom: 0.8vw;
           box-sizing: border-box;
@@ -262,7 +263,7 @@
 
             &.active {
               opacity: 1;
-              background-color: rgba($color: #8b63f7, $alpha: 0.3);
+              background-color: rgba($color: #a88bf7, $alpha: 0.8);
             }
           }
         }
@@ -283,9 +284,8 @@
       }
       .wish-list-wrap {
         display: flex;
-        justify-content: space-between;
         flex-wrap: wrap;
-        gap: 1.5vw 0;
+        gap: 1.5vw;
 
         .item-wrap {
           position: relative;

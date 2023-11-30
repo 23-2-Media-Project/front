@@ -26,7 +26,7 @@ const AddArtwork = ({ setAddTime, onRemove, setIsActive }) => {
   return (
     <article className="add-artwork-container">
       <div className="change-order">
-        <HamburgerIcon />
+        <HamburgerIcon style={{ width: "1.2vw" }} />
       </div>
       <div className="text-section">
         <div className="title-section">
@@ -63,7 +63,11 @@ const AddArtwork = ({ setAddTime, onRemove, setIsActive }) => {
           />
         </div>
       </div>
-      <CloseIcon className="close-icon" onClick={handleRemove} />
+      <CloseIcon
+        style={{ width: "1.2vw" }}
+        className="close-icon"
+        onClick={handleRemove}
+      />
     </article>
   );
 };

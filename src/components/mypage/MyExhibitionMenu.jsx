@@ -2,12 +2,14 @@ import React, { useState } from "react";
 
 import ListHoverContent from "../common/ListHoverContents";
 
+import { exhibitionListData } from "../../consts/exhibitionListData";
+
 const MyExhibitionMenu = () => {
   const [hoverIdx, setHoverIdx] = useState(-1);
 
   return (
     <div className="my-exhibition-wrap">
-      {lists.map((list, index) => {
+      {exhibitionListData.map((list, index) => {
         return (
           <div
             key={index}
@@ -18,9 +20,14 @@ const MyExhibitionMenu = () => {
             onMouseLeave={() => {
               setHoverIdx(-1);
             }}
+            style={{
+              backgroundImage: `url(${list.img})`,
+              backgroundSize: "cover",
+              backgroundPositionY: "center",
+            }}
           >
             <div className={`hover-wrap ${hoverIdx === index && "active"}`}>
-              <ListHoverContent />
+              <ListHoverContent data={list} />
             </div>
           </div>
         );
@@ -30,5 +37,3 @@ const MyExhibitionMenu = () => {
 };
 
 export default MyExhibitionMenu;
-
-const lists = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];

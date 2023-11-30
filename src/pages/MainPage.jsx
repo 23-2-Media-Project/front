@@ -7,6 +7,12 @@ import "../styles/MainPage.scss";
 
 import ExhibitionList from "../components/main/ExhibitionList";
 
+import {
+  exhibitionData,
+  exhibitionData2,
+  exhibitionData3,
+} from "../consts/exhibitionData";
+
 /* TODO:
  * [O] 3D 로고 애니메이션 적용
  * [O] 이달의 전시회 버튼 컴포넌트 구현
@@ -20,7 +26,7 @@ const MainPage = () => {
     <div className="main-container">
       <div className="left-wrap">
         <div className="logo-wrap">
-          <Logo3d style={{ width: "350px" }} className="logo" />
+          <Logo3d style={{ width: "22vw" }} className="logo" />
         </div>
         <div className="monthly-exhibition-btn-wrap">
           <div className="btn-title">12월의 전시회 입장하기</div>
@@ -37,9 +43,9 @@ const MainPage = () => {
         </div>
       </div>
       <div className="right-wrap">
-        <ExhibitionList title={"추천 전시회"} />
-        <ExhibitionList title={"인기 전시회"} />
-        <ExhibitionList title={"최신 전시회"} />
+        <ExhibitionList title={"추천 전시회"} data={exhibitionData} />
+        <ExhibitionList title={"인기 전시회"} data={exhibitionData2} />
+        <ExhibitionList title={"최신 전시회"} data={exhibitionData3} />
       </div>
     </div>
   );

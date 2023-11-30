@@ -81,9 +81,29 @@ const GuestBookBox = styled.div`
 `;
 
 const guestBookData = [
-  { nickname: "닉네임", contents: "너무 감각적입니다.", date: "2023.11.23" },
-  { nickname: "닉네임", contents: "너무 감각적입니다.", date: "2023.11.23" },
-  { nickname: "닉네임", contents: "너무 감각적입니다.", date: "2023.11.23" },
-  { nickname: "닉네임", contents: "너무 감각적입니다.", date: "2023.11.23" },
-  { nickname: "닉네임", contents: "너무 감각적입니다.", date: "2023.11.23" },
+  {
+    nickname: "계 림",
+    contents: "아트워크의 로고 디자인이 너무 인상 깊어요!",
+    date: "2023.11.16",
+  },
+  {
+    nickname: "도리",
+    contents: "멋진 전시회들이네요! 좋은 디자인에 대해 배우고 갑니다 ㅎㅎ",
+    date: "2023.11.01",
+  },
+  {
+    nickname: "미프",
+    contents: "이런 아이디어는 어떻게 생각하나요?",
+    date: "2023.10.29",
+  },
+  {
+    nickname: "지나가는 행인",
+    contents: "좋은 전시회 감사합니다ㅂ!",
+    date: "2023.10.02",
+  },
+  {
+    nickname: "오늘 하루 맑음",
+    contents: "너무 감각적입니다!!",
+    date: "2023.09.28",
+  },
 ];
