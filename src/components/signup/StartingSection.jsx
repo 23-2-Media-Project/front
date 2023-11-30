@@ -10,11 +10,11 @@ const StartingSection = ({ setClickBtn }) => {
       <span className="sub-title">소셜로그인을 통해 로그인/회원가입 진행</span>
       <div className="signup-btn-wrap">
         <button className="signup-btn" onClick={() => setClickBtn(true)}>
-          <KakaoIcon width={24} height={24} />
+          <KakaoIcon style={{ width: "2vw", height: "2vw" }} />
           <span className="btn-text">카카오로 시작하기</span>
         </button>
         <button className="signup-btn" onClick={() => setClickBtn(true)}>
-          <NaverIcon width={24} height={24} />
+          <NaverIcon style={{ width: "2vw", height: "2vw" }} />
           <span className="btn-text">네이버로 시작하기</span>
         </button>
       </div>
