@@ -4,6 +4,8 @@ import "../styles/PurchasePage.scss";
 
 import { ReactComponent as CheckBoxSvg } from "../assets/icons/check-box.svg";
 
+import { purchaseListData2 } from "../consts/purchaseListData";
+
 const PurchasePage = () => {
   const [clickTimes, setClickTimes] = useState(0);
   const handleClick = useCallback(
@@ -26,19 +28,19 @@ const PurchasePage = () => {
   const [clickIncreaseBtn, setClickIncreaseBtn] = useState(0);
   const [clickDecreaseBtn, setClickDecreaseBtn] = useState(0);
   useEffect(() => {
-    purchaseItems[clickIndex].count += 1;
-    setNum(purchaseItems[clickIndex].count);
+    purchaseListData2[clickIndex].count += 1;
+    setNum(purchaseListData2[clickIndex].count);
   }, [clickIncreaseBtn]);
   useEffect(() => {
-    purchaseItems[clickIndex].count -= 1;
-    setNum(purchaseItems[clickIndex].count);
+    purchaseListData2[clickIndex].count -= 1;
+    setNum(purchaseListData2[clickIndex].count);
   }, [clickDecreaseBtn]);
 
   return (
     <container className="purchase-container">
       <div className="title-wrap">
         <span className="title">장바구니</span>
-        <span className="title">({purchaseItems.length})</span>
+        <span className="title">({purchaseListData2.length})</span>
       </div>
       <table className="shopping-cart-table">
         <thead className="table-head">
@@ -64,7 +66,7 @@ const PurchasePage = () => {
 
         <tbody className="table-body">
           <tr className="order-lists-wrap">
-            {purchaseItems.map((list, index) => {
+            {purchaseListData2.map((list, index) => {
               return (
                 <div className="order-list-wrap">
                   <td className="check-box-wrap" onClick={handleClick}>
@@ -73,7 +75,13 @@ const PurchasePage = () => {
                     </div>
                   </td>
                   <td className="order-info">
-                    <div className="order-img"></div>
+                    <div
+                      className="order-img"
+                      style={{
+                        backgroundImage: `url(${list.img})`,
+                        backgroundSize: "cover",
+                      }}
+                    ></div>
                     <div className="order-name-real">
                       <div className="order-name">{list.name}</div>
                       <div className="order-real">{list.real}</div>
@@ -101,7 +109,7 @@ const PurchasePage = () => {
                     </span>
                   </td>
                   <td className="order-state">{list.state}</td>
-                  <td className="order-price">{list.price}원</td>
+                  <td className="order-price">{list.price}</td>
                   <td className="order-option">
                     <button className="option-btn">주문하기</button>
                     <button className="option-btn">삭제하기</button>
@@ -115,7 +123,7 @@ const PurchasePage = () => {
       <div className="total-price-wrap">
         <div className="sub-price-wrap">
           <span className="text1">총 상품금액</span>
-          <span className="text2">60,000원</span>
+          <span className="text2">73,000원</span>
         </div>
         <span className="text2">+</span>
         <div className="sub-price-wrap">
@@ -125,7 +133,7 @@ const PurchasePage = () => {
         <span className="text2">=</span>
         <div className="sub-price-wrap">
           <span className="text1">합계</span>
-          <span className="text2">53,000원</span>
+          <span className="text2">76,000원</span>
         </div>
       </div>
       <div className="btn-wrap">
@@ -137,35 +145,3 @@ const PurchasePage = () => {
 };
 
 export default PurchasePage;
-
-const purchaseItems = [
-  {
-    count: 1,
-    name: "구매 아이템1",
-    real: "비실물",
-    price: 15000,
-    state: "배송완료",
-  },
-  {
-    count: 1,
-    name: "구매 아이템2",
-    real: "비실물",
-    price: 15000,
-    state: "배송",
-  },
-
-  {
-    count: 1,
-    name: "구매 아이템3",
-    real: "비실물",
-    price: 15000,
-    state: "배송",
-  },
-  {
-    count: 1,
-    name: "구매 아이템4",
-    real: "비실물",
-    price: 15000,
-    state: "배송",
-  },
-];

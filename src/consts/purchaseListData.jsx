@@ -49,3 +49,39 @@ export const purchaseListData = [
     ],
   },
 ];
+
+export const purchaseListData2 = [
+  {
+    count: 1,
+    name: "굿노트용 다이어리",
+    real: "비실물",
+    price: "8,000원",
+    state: "배송",
+    img: img1,
+  },
+  {
+    count: 1,
+    name: "아트워크 3D 로고",
+    real: "비실물",
+    price: "15,000원",
+    state: "배송",
+    img: img2,
+  },
+
+  {
+    count: 1,
+    name: "웰컴 키트",
+    real: "비실물",
+    price: "30,000원",
+    state: "배송",
+    img: img3,
+  },
+  {
+    count: 1,
+    name: "콜라 캐릭터 인형",
+    real: "실물",
+    price: "20,000원",
+    state: "배송",
+    img: img4,
+  },
+];
