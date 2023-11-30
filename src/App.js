@@ -11,6 +11,7 @@ import MyPage from "./pages/MyPage";
 import ExhibitionWritingPage from "./pages/ExhibitionWritingPage";
 import ContentsSection2 from "./components/monthlyExhibition/ContentsSection2";
 import EditMyInfoPage from "./pages/EditMyInfoPage";
+import PurchasePage from "./pages/PurchasePage";
 
 function App() {
   let location = useLocation();
@@ -34,6 +35,7 @@ function App() {
         <Route path="/mypage" element={<MyPage />} />
         <Route path="/mypage/edit" element={<EditMyInfoPage />} />
         <Route path="/writing" element={<ExhibitionWritingPage />} />
+        <Route path="/purchase" element={<PurchasePage />} />
       </Routes>
     </>
   );
