@@ -4,6 +4,8 @@ import { ReactComponent as PurpleFavoriteSvg } from "../../assets/icons/favorite
 import { ReactComponent as CartSvg } from "../../assets/icons/cart.svg";
 import AddCartModal from "../common/AddCartModal";
 
+import { purchaseLists } from "../../consts/exhibitionDetailData";
+
 const WishListMenu = () => {
   // 좋아요 버튼 클릭 관련
   const [clickTimes, setClickTimes] = useState(0);
@@ -26,10 +28,17 @@ const WishListMenu = () => {
 
   return (
     <div className="wish-list-wrap">
-      {wishListItems.map((item, index) => {
+      {purchaseLists.map((item, index) => {
         return (
           <div key={index} className="item-wrap">
-            <div className="item-img">
+            <div
+              className="item-img"
+              style={{
+                backgroundImage: `url(${item.img})`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+              }}
+            >
               <PurpleFavoriteSvg
                 onClick={handleClick}
                 className="favorite-icon"

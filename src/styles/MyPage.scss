@@ -284,9 +284,8 @@
       }
       .wish-list-wrap {
         display: flex;
-        justify-content: space-between;
         flex-wrap: wrap;
-        gap: 1.5vw 0;
+        gap: 1.5vw;
 
         .item-wrap {
           position: relative;

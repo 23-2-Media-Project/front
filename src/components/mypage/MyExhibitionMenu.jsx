@@ -37,5 +37,3 @@ const MyExhibitionMenu = () => {
 };
 
 export default MyExhibitionMenu;
-
-const lists = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
