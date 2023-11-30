@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
 import { ReactComponent as Logo } from "../../assets/logo/logo.svg";
+import { ReactComponent as ShoppingCartSvg } from "../../assets/icons/shopping_cart.svg";
 
 /* TODO:
  * [O] 로고 삽입
@@ -42,19 +43,40 @@ const Header = () => {
           <PageBlurBtn to="mypage">MyPage</PageBlurBtn>
         )}
       </PageBtnWrap>
-      <SignupBtn to="signup">LogIn</SignupBtn>
+      <RightBtnWrap>
+        <PurchaseBtn to="purchase">
+          <ShoppingCartSvg style={{ width: "1.5vw" }} />
+        </PurchaseBtn>
+        <SignupBtn to="signup">LogIn</SignupBtn>
+      </RightBtnWrap>
     </HeaderWrap>
   );
 };
 
+const PurchaseBtn = styled(Link)`
+  cursor: pointer;
+  text-decoration: none;
+  cursor: pointer;
+  color: #a88bf7;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.5;
+  }
+`;
 const SignupBtn = styled(Link)`
-  position: absolute;
-  right: 30px;
-  width: max-content;
   text-decoration: none;
   cursor: pointer;
   color: #a88bf7;
   font-size: 0.8vw;
+`;
+const RightBtnWrap = styled.div`
+  position: absolute;
+  right: 30px;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 1vw;
 `;
 const PageBtn = styled(Link)`
   text-decoration: none;
