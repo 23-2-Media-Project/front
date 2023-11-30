@@ -1,6 +1,6 @@
 const userInfo = {
   name: "이혜승",
-  profileImg: "../assets/imgs/profile-img.jpg",
+  profileImg: "../../assets/imgs/profile-img.jpg",
   nickName: "따릉이",
   email: "artwork@ajou.ac.kr",
   phoneNumber: "010-1234-1234",
