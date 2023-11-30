@@ -11,8 +11,6 @@ import MonthlyExhibitionPage from "./pages/MonthlyExhibitionPage";
 import MyPage from "./pages/MyPage";
 import SignupPage from "./pages/SignupPage";
 import StartingPage from "./pages/StartingPage";
-import ExhibitionWritingPage from "./pages/ExhibitionWritingPage";
-import ContentsSection2 from "./components/monthlyExhibition/ContentsSection2";
 import EditMyInfoPage from "./pages/EditMyInfoPage";
 import PurchasePage from "./pages/PurchasePage";
 
