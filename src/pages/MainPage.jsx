@@ -8,10 +8,10 @@ import "../styles/MainPage.scss";
 import ExhibitionList from "../components/main/ExhibitionList";
 
 import {
-  mainExhibitionData,
-  mainExhibitionData2,
-  mainExhibitionData3,
-} from "../consts/mainExhibitionData";
+  exhibitionData,
+  exhibitionData2,
+  exhibitionData3,
+} from "../consts/exhibitionData";
 
 /* TODO:
  * [O] 3D 로고 애니메이션 적용
@@ -43,9 +43,9 @@ const MainPage = () => {
         </div>
       </div>
       <div className="right-wrap">
-        <ExhibitionList title={"추천 전시회"} data={mainExhibitionData} />
-        <ExhibitionList title={"인기 전시회"} data={mainExhibitionData2} />
-        <ExhibitionList title={"최신 전시회"} data={mainExhibitionData3} />
+        <ExhibitionList title={"추천 전시회"} data={exhibitionData} />
+        <ExhibitionList title={"인기 전시회"} data={exhibitionData2} />
+        <ExhibitionList title={"최신 전시회"} data={exhibitionData3} />
       </div>
     </div>
   );

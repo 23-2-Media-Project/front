@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import { ReactComponent as FavoriteIcon } from "../../assets/icons/favorite.svg";
 import { ReactComponent as ShareIcon } from "../../assets/icons/share.svg";
@@ -49,27 +50,53 @@ const ExhibitionList = ({ title, data }) => {
         )}
       </div>
       <div className="exhibition-imgs-wrap">
-        <div
-          className="exhibition-img-wrap"
-          onMouseOver={() => {
-            setHover(true);
-          }}
-          onMouseLeave={() => {
-            setHover(false);
-          }}
-        >
+        {title === "추천 전시회" ? (
+          <Link to="/detail">
+            <div
+              className="exhibition-img-wrap"
+              onMouseOver={() => {
+                setHover(true);
+              }}
+              onMouseLeave={() => {
+                setHover(false);
+              }}
+            >
+              <div
+                className={`exhibition-img`}
+                style={{
+                  backgroundImage: `url(${data[0].img})`,
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "cover",
+                }}
+              ></div>
+              <div className={`hover-wrap ${hover && "active"}`}>
+                <HoverContents data={data[0]} />
+              </div>
+            </div>
+          </Link>
+        ) : (
           <div
-            className={`exhibition-img`}
-            style={{
-              backgroundImage: `url(${data[0].img})`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
+            className="exhibition-img-wrap"
+            onMouseOver={() => {
+              setHover(true);
             }}
-          ></div>
-          <div className={`hover-wrap ${hover && "active"}`}>
-            <HoverContents data={data[0]} />
+            onMouseLeave={() => {
+              setHover(false);
+            }}
+          >
+            <div
+              className={`exhibition-img`}
+              style={{
+                backgroundImage: `url(${data[0].img})`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+              }}
+            ></div>
+            <div className={`hover-wrap ${hover && "active"}`}>
+              <HoverContents data={data[0]} />
+            </div>
           </div>
-        </div>
+        )}
         <div
           className="exhibition-img-wrap"
           onMouseOver={() => {

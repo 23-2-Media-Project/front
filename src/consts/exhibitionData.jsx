@@ -1,4 +1,5 @@
 import artwalkLogo from "../assets/imgs/data/37.png";
+
 import monthlyDama from "../assets/imgs/data/52.png";
 import dyonaPizza from "../assets/imgs/data/10.png";
 
@@ -10,7 +11,7 @@ import webPortfolio from "../assets/imgs/data/46.png";
 import colaWeb from "../assets/imgs/data/7.png";
 import graphicPortfolio from "../assets/imgs/data/5.png";
 
-export const mainExhibitionData = [
+export const exhibitionData = [
   {
     name: "아트워크 로고",
     category: "그래픽디자인",
@@ -26,7 +27,7 @@ export const mainExhibitionData = [
   },
 ];
 
-export const mainExhibitionData2 = [
+export const exhibitionData2 = [
   {
     name: "노트 디자인",
     category: "그래픽디자인",
@@ -42,7 +43,7 @@ export const mainExhibitionData2 = [
   },
 ];
 
-export const mainExhibitionData3 = [
+export const exhibitionData3 = [
   {
     name: "웹 포트폴리오",
     category: "앱/웹디자인",
