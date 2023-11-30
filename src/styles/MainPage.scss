@@ -19,8 +19,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-
+    justify-content: center;
+    gap: 3.5vw;
     .logo-wrap {
       .logo {
         @include infiniteAnimation(0.3s, 1.5s, moveUpDown);
@@ -30,20 +30,20 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 25px;
+      gap: 2vw;
 
       .btn-title {
         color: #fff;
-        font-size: 16px;
+        font-size: 1.1vw;
         font-weight: 600;
       }
       .monthly-exhibition-btn {
         cursor: pointer;
+        width: 14vw;
+        height: 3.5vw;
         position: relative;
-        height: 50px;
-        width: 220px;
         box-sizing: border-box;
-        font-size: 22px;
+        font-size: 1.5vw;
         color: #fff;
         background-color: rgba(255, 255, 255, 0.35);
         border: 1px solid #fff;
@@ -81,10 +81,10 @@
   }
   .right-wrap {
     width: max-content;
-    height: 520px;
+    height: 36vw;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 2.5vw;
     overflow-y: auto;
     overflow-x: hidden;
 
@@ -105,7 +105,7 @@
       width: max-content;
       display: flex;
       flex-direction: column;
-      padding: 20px 25px;
+      padding: 1.5vw;
       background-color: rgba(255, 255, 255, 0.4);
       border-radius: 5px;
       @include animation(0, 2.5s, fadeIn);
@@ -113,21 +113,21 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 20px;
+        margin-bottom: 1.5vw;
 
         .title {
           color: #a88bf7;
-          font-size: 16px;
+          font-size: 1.1vw;
           font-weight: 600;
         }
         .interests-btn-wrap {
           display: flex;
-          gap: 10px;
+          gap: 0.8vw;
 
           .interest-btn {
             color: #fff;
-            font-size: 14px;
-            padding: 6px 12px;
+            font-size: 0.9vw;
+            padding: 0.4vw 0.8vw;
             border-radius: 30px;
             border: 1px solid #fff !important;
             background-color: rgba($color: #fff, $alpha: 0.5);
@@ -136,14 +136,14 @@
       }
       .exhibition-imgs-wrap {
         display: flex;
-        gap: 20px;
+        gap: 1.5vw;
         .exhibition-img-wrap {
           cursor: pointer;
           position: relative;
 
           .exhibition-img {
-            width: 250px;
-            height: 150px;
+            width: 17vw;
+            height: 10vw;
             border-radius: 5px;
           }
           .hover-wrap {
@@ -155,7 +155,7 @@
             height: 100%;
             opacity: 0%;
             border-radius: 5px;
-            padding: 20px;
+            padding: 1.5vw;
             box-sizing: border-box;
 
             &.active {
@@ -175,29 +175,28 @@
                 display: flex;
                 flex-direction: column;
                 align-items: start;
-                gap: 8px;
-
+                gap: 0.6vw;
                 .title {
                   color: #333;
-                  font-size: 16px;
-                  font-weight: 500;
+                  font-size: 1.1vw;
+                  font-weight: 600;
                 }
                 .topic {
                   color: #fff;
-                  font-size: 12px;
+                  font-size: 0.9vw;
                   background-color: rgba($color: #333, $alpha: 0.5);
-                  padding: 6px 10px;
+                  padding: 0.4vw 0.8vw;
                   border-radius: 50px;
                 }
               }
               .icon-wrap {
                 display: flex;
                 align-items: center;
-                gap: 3px;
+                gap: 0.3vw;
                 margin-left: auto;
 
                 .like-count {
-                  font-size: 12px;
+                  font-size: 0.8vw;
                 }
               }
             }

@@ -26,7 +26,7 @@ const MainPage = () => {
     <div className="main-container">
       <div className="left-wrap">
         <div className="logo-wrap">
-          <Logo3d style={{ width: "350px" }} className="logo" />
+          <Logo3d style={{ width: "22vw" }} className="logo" />
         </div>
         <div className="monthly-exhibition-btn-wrap">
           <div className="btn-title">12월의 전시회 입장하기</div>

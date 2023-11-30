@@ -13,9 +13,9 @@ const HoverContents = ({ data }) => {
         <div className="topic">{data?.category}</div>
       </div>
       <div className="icon-wrap">
-        <FavoriteIcon style={{ width: "22px" }} />
+        <FavoriteIcon style={{ width: "1vw" }} />
         <div className="like-count">{data?.like}</div>
-        <ShareIcon style={{ width: "22px" }} />
+        <ShareIcon style={{ width: "1vw" }} />
       </div>
     </div>
   );
