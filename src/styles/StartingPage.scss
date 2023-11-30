@@ -8,7 +8,7 @@
   height: 100vh;
   background-color: #000;
   color: #333;
-  padding: 50px 55px;
+  padding: 5vw 6vw 5vw;
   box-sizing: border-box;
 
   .circle {
@@ -31,7 +31,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 3vw;
     color: #000;
 
     .main-text {
@@ -41,7 +41,7 @@
     .sub-text {
       font-size: 2vw;
       font-weight: 500;
-      margin-top: 20px;
+      margin-top: 2vw;
     }
   }
   .content-wrap {
@@ -57,21 +57,21 @@
     .title-wrap {
       display: flex;
       align-items: center;
-      gap: 30px;
+      gap: 2vw;
       color: #a88bf7;
-      font-size: 24px;
+      font-size: 1.5vw;
       font-weight: 600;
     }
     .license-text {
       color: #a88bf7;
-      font-size: 16px;
+      font-size: 1vw;
     }
   }
   .arrow-icon {
     cursor: pointer;
     position: relative;
     z-index: 2;
-    width: 10vw;
+    width: 9vw;
     @include animation(0s, 1.5s, moveLeft);
 
     :hover {

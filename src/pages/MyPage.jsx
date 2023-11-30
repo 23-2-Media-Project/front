@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 
 import "../styles/MyPage.scss";
 
@@ -10,6 +9,8 @@ import LikeExhibitionMenu from "../components/mypage/LikeExhibitionMenu";
 import GuestBookMenu from "../components/mypage/GuestBookMenu";
 import WishListMenu from "../components/mypage/WishListMenu";
 import PurchaseHistoryMenu from "../components/mypage/PurchaseHistoryMenu";
+
+import { userInfo } from "../consts/userInfo";
 
 /* TODO:
  * [O] 사용자 정보 박스 구현
@@ -35,10 +36,7 @@ const MyPage = () => {
 
   return (
     <div className="mypage-container">
-      <UserInfoBox />
-      {/* <Link to={"/writing"}>
-        <button className="writing-btn">전시회 작성</button>
-      </Link> */}
+      <UserInfoBox userInfo={userInfo} />
       <div className="right-wrap">
         <TabMenu menuArr={menuArr} setTab={setTab} currentTab={currentTab} />
         <div className="menu-contents-wrap">{menuArr[currentTab].content}</div>
