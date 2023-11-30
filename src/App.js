@@ -10,6 +10,7 @@ import ExhibitionPage from "./pages/ExhibitionPage";
 import MyPage from "./pages/MyPage";
 import ExhibitionWritingPage from "./pages/ExhibitionWritingPage";
 import ContentsSection2 from "./components/monthlyExhibition/ContentsSection2";
+import EditMyInfoPage from "./pages/EditMyInfoPage";
 
 function App() {
   let location = useLocation();
@@ -26,11 +27,12 @@ function App() {
       <Routes>
         <Route path="/" element={<StartingPage />} />
         <Route path="/main" element={<MainPage />} />
-        <Route path="/signup" element={<SignupPage />}></Route>
+        <Route path="/signup" element={<SignupPage />} />
         <Route path="/exhibition" element={<ExhibitionPage />} />
         <Route path="/monthly" element={<MonthlyExhibitionPage />} />
         <Route path="/monthly/list" element={<ContentsSection2 />} />
         <Route path="/mypage" element={<MyPage />} />
+        <Route path="/mypage/edit" element={<EditMyInfoPage />} />
         <Route path="/writing" element={<ExhibitionWritingPage />} />
       </Routes>
     </>

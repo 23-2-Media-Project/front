@@ -36,9 +36,6 @@ const MyPage = () => {
   return (
     <div className="mypage-container">
       <UserInfoBox />
-      {/* <Link to={"/writing"}>
-        <button className="writing-btn">전시회 작성</button>
-      </Link> */}
       <div className="right-wrap">
         <TabMenu menuArr={menuArr} setTab={setTab} currentTab={currentTab} />
         <div className="menu-contents-wrap">{menuArr[currentTab].content}</div>
