@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
@@ -14,6 +14,8 @@ import { ReactComponent as ShoppingCartSvg } from "../../assets/icons/shopping_c
  */
 
 const Header = () => {
+  const [isLogin, setLogin] = useState(false);
+
   // 현재 경로 확인 변수
   let location = useLocation();
 
@@ -47,7 +49,9 @@ const Header = () => {
         <PurchaseBtn to="purchase">
           <ShoppingCartSvg style={{ width: "1.5vw" }} />
         </PurchaseBtn>
-        <SignupBtn to="signup">LogIn</SignupBtn>
+        <SignupBtn to="signup" onClick={() => setLogin(!isLogin)}>
+          {isLogin ? "LogIn" : "LogOut"}
+        </SignupBtn>
       </RightBtnWrap>
     </HeaderWrap>
   );
