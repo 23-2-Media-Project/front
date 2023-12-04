@@ -42,7 +42,7 @@ const AddMerchandise = ({ setAddTime, onRemove, setIsActive }) => {
   return (
     <article className="add-merchandise-container">
       <div className="change-order">
-        <HamburgerIcon />
+        <HamburgerIcon style={{ width: "1.2vw" }} />
       </div>
       <div className="input-section">
         <div className="title-section">
@@ -104,7 +104,11 @@ const AddMerchandise = ({ setAddTime, onRemove, setIsActive }) => {
           </div>
         </div>
       </div>
-      <CloseIcon className="close-icon" onClick={handleRemove} />
+      <CloseIcon
+        style={{ width: "1.2vw" }}
+        className="close-icon"
+        onClick={handleRemove}
+      />
     </article>
   );
 };
