@@ -1,0 +1,14 @@
+* {
+  font-family: "Pretendard" !important;
+
+  /* Chrome, Safari, Opera 스크롤바 숨기기 */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* 텍스트 드래그 막기 */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
