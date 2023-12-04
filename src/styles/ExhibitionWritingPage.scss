@@ -206,7 +206,7 @@
     .page-title {
       font-size: 1.1vw;
       font-weight: 600;
-      margin-bottom: 3rem;
+      margin-bottom: 2vw;
       width: 70%;
     }
 
@@ -291,6 +291,9 @@
           cursor: auto;
         }
       }
+      .next-button {
+        margin-left: 2vw;
+      }
     }
   }
 
@@ -305,7 +308,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 0 0.3vw;
+      width: 2vw;
       background-color: #000000;
       border-radius: 4px 0 0 4px;
     }
@@ -413,7 +416,7 @@
 
   .merchandise-info-container {
     margin: 2vw 0;
-    padding: 0 auto;
+    padding: 1vw auto;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -423,17 +426,17 @@
     .page-title {
       font-size: 1.1vw;
       font-weight: 600;
-      margin-bottom: 3rem;
+      margin-bottom: 2vw;
       width: 70%;
     }
     //여기까지
     .merchandise-info-wrapper {
-      padding: 1vw 0;
+      padding: 1vw;
       display: flex;
       flex-direction: column;
       width: 70%;
       height: 20vw;
-      gap: 34px;
+      gap: 2.5vw;
       overflow: auto;
       &::-webkit-scrollbar {
         display: block;
@@ -455,7 +458,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 2vw;
+      padding: 0.8vw 0;
       font-size: 1vw;
       gap: 0.5vw;
       cursor: pointer;
@@ -480,12 +483,12 @@
         width: 85%;
         height: 5px;
 
-        .step-two {
+        .step-three {
           background-color: #000000;
           grid-row: 1 / span 1;
         }
         .step-one,
-        .step-three {
+        .step-two {
           background-color: #ededed;
           grid-row: 1 / span 1;
         }
@@ -506,38 +509,44 @@
           cursor: auto;
         }
       }
+      .next-button {
+        margin-left: 2vw;
+      }
     }
   }
 
   .add-merchandise-container {
     display: flex;
     width: 100%;
+    height: max-content;
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
 
     .change-order {
+      border-radius: 4px 0 0 4px;
+      height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 1.8rem;
+      width: 2vw;
       background-color: #000000;
     }
 
     .input-section {
+      padding: 2vw;
+      box-sizing: border-box;
       display: flex;
       flex-direction: column;
-      padding: 2.5rem 3rem;
-      gap: 2rem;
-      width: 80%;
+      gap: 1.5vw;
+      width: 90%;
 
       .title {
         font-size: 0.9vw;
         font-weight: 600;
-        margin-right: 3rem;
         display: flex;
         align-items: center;
         white-space: nowrap;
         width: max-content;
-        gap: 2px;
 
         .condition {
           color: #8b63f7;
@@ -546,7 +555,7 @@
 
       .input-area {
         width: 70%;
-        padding: 0.3rem 1.3rem;
+        padding: 0.4vw 0.8vw;
         font-size: 0.8vw;
         font-weight: 500;
         border: none;
@@ -556,15 +565,19 @@
           color: #9e9e9e;
         }
       }
-
       .title-section,
       .price-section {
+        width: 28vw;
+        justify-content: space-between;
         display: flex;
         align-items: center;
       }
 
       .add-file-section {
         display: flex;
+        .title {
+          margin-right: 2.3vw;
+        }
 
         .file-wrapper {
           display: flex;
@@ -572,10 +585,9 @@
           width: 100%;
 
           .upload-name {
-            font-size: 0.8vw;
+            font-size: 0.7vw;
             width: 50%;
-            height: 40px;
-            padding: 0 0.3rem;
+            padding: 0.4vw 0.8vw;
             border: none;
             color: #9e9e9e;
 
@@ -591,7 +603,7 @@
             justify-content: center;
             align-items: center;
             padding: 0.3vw 0.8vw;
-            font-size: 0.9vw !important;
+            font-size: 0.8vw !important;
             font-weight: 600;
             text-align: center;
             background-color: #ededed;
@@ -621,18 +633,18 @@
         font-size: 0.8vw;
         font-weight: 500;
 
+        .title {
+          margin-right: 3.3vw;
+        }
         .radio-button-section {
-          display: felx;
-          align-items: center;
-          padding: 0 1rem;
           color: #9e9e9e;
 
           label {
             [type="checkbox"] {
               background-color: #9e9e9e;
               border-radius: 4px;
-              width: 1.25em;
-              height: 1.25em;
+              width: 1vw;
+              height: 1vw;
             }
           }
         }
@@ -640,7 +652,7 @@
     }
 
     .close-icon {
-      margin: 1rem;
+      margin-top: 1vw;
       cursor: pointer;
     }
   }

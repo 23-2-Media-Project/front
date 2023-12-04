@@ -24,7 +24,7 @@ const Merchandise = ({ handlePrevPage, handleNextPage }) => {
 
   return (
     <article className="merchandise-info-container">
-      <span className="page-title">작품 정보 입력</span>
+      <span className="page-title">상품 정보 입력</span>
       <div className="merchandise-info-wrapper" ref={scrollRef}>
         {Array.from({ length: addTime }).map((_, index) => (
           <AddMerchandise
