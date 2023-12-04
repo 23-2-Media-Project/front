@@ -291,6 +291,9 @@
           cursor: auto;
         }
       }
+      .next-button {
+        margin-left: 2vw;
+      }
     }
   }
 
@@ -480,12 +483,12 @@
         width: 85%;
         height: 5px;
 
-        .step-two {
+        .step-three {
           background-color: #000000;
           grid-row: 1 / span 1;
         }
         .step-one,
-        .step-three {
+        .step-two {
           background-color: #ededed;
           grid-row: 1 / span 1;
         }
@@ -505,6 +508,9 @@
         &:disabled {
           cursor: auto;
         }
+      }
+      .next-button {
+        margin-left: 2vw;
       }
     }
   }
