@@ -8,6 +8,7 @@ import ListHoverContents from "../components/common/ListHoverContents";
 import TopicCategorySelectMenu from "../components/exhibition/TopicCategorySelectMenu";
 
 import { exhibitionListData } from "../consts/exhibitionListData";
+import { Link } from "react-router-dom";
 
 /* TODO:
  * [O] 최신순, 인기순, 필터링 버튼 및 툴팁 구현
@@ -84,26 +85,49 @@ const ExhibitionPage = () => {
         />
         <div className="middle-line"></div>
         <div className="content-box-wrap">
-          {exhibitionListData.map((data, idx) => (
-            <div
-              key={data.name}
-              className="content-box"
-              onMouseOver={() => {
-                setHoverIdx(idx);
-              }}
-              onMouseLeave={() => {
-                setHoverIdx(-1);
-              }}
-              style={{
-                backgroundImage: `url(${data.img})`,
-                backgroundSize: "cover",
-              }}
-            >
-              <div className={`hover-wrap ${hoverIdx === idx && "active"}`}>
-                <ListHoverContents data={data} />
+          {exhibitionListData.map((data, idx) =>
+            idx === 0 ? (
+              <Link to={"/detail"}>
+                <div
+                  key={data.name}
+                  className="content-box"
+                  onMouseOver={() => {
+                    setHoverIdx(idx);
+                  }}
+                  onMouseLeave={() => {
+                    setHoverIdx(-1);
+                  }}
+                  style={{
+                    backgroundImage: `url(${data.img})`,
+                    backgroundSize: "cover",
+                  }}
+                >
+                  <div className={`hover-wrap ${hoverIdx === idx && "active"}`}>
+                    <ListHoverContents data={data} />
+                  </div>
+                </div>
+              </Link>
+            ) : (
+              <div
+                key={data.name}
+                className="content-box"
+                onMouseOver={() => {
+                  setHoverIdx(idx);
+                }}
+                onMouseLeave={() => {
+                  setHoverIdx(-1);
+                }}
+                style={{
+                  backgroundImage: `url(${data.img})`,
+                  backgroundSize: "cover",
+                }}
+              >
+                <div className={`hover-wrap ${hoverIdx === idx && "active"}`}>
+                  <ListHoverContents data={data} />
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          )}
         </div>
       </div>
     </div>
